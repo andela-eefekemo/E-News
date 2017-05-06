@@ -1,5 +1,5 @@
 export default {
-  entry: './src/js/main.js',
+  entry: './src/js/client.js',
   output: {
     filename: '.js/bundle.js',
   },
