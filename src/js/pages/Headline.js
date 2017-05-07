@@ -60,7 +60,9 @@ class Headlines extends React.Component {
               </select>
             </div>
           </div>
-          {singleArticles}
+          <div className="row">
+            {singleArticles}
+          </div>
         </div>
         <Footer />
       </div>

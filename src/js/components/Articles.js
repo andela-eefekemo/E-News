@@ -3,8 +3,8 @@ import React from 'react';
 const Article = (props) => {
   const { urlToImage, description, title, url } = props;
   return (
-    <div className="row">
-      <div className="col s12 m6">
+
+      <div className="col s12 m5">
         <div className="card">
           <div className="card-image">
             <img src={urlToImage} alt="Headline" />
@@ -18,8 +18,6 @@ const Article = (props) => {
           </div>
         </div>
       </div>
-    </div>
-
   );
 };
 

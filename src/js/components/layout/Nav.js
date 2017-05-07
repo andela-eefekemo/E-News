@@ -12,11 +12,9 @@ export default class Nav extends React.Component {
             </div>
             <ul className="right hide-on-med-and-down">
               <li><IndexLink to="/">Home</IndexLink></li>
-              <li><Link to="/headlines">Headlines</Link></li>
             </ul>
             <ul className="side-nav" id="mobile-demo">
-              <li><IndexLink to="/">Dashboard</IndexLink></li>
-              <li><Link to="/headlines">Headlines</Link></li>
+              <li><Link to="/">Home</Link></li>
             </ul>
           </div>
         </nav>
