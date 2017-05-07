@@ -14,7 +14,7 @@ const Article = (props) => {
             <p>{description}</p>
           </div>
           <div className="card-action">
-            <a href={url}>View More</a>
+            <a href={url} target="_blank">View More</a>
           </div>
         </div>
       </div>
