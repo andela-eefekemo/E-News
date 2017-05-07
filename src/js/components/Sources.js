@@ -1,28 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { browserHistory } from 'react-router';
 import PropTypes from 'prop-types';
 
-const Sources = (props) => {
-  const { name, description, id } = props;
-  return (
-    <div className="col m4">
-      <h5>{name}</h5>
-      <p>{description}</p>
-      <Link class="btn btn-default" to={`/headlines:&{id}`} >More Info</Link>
-    </div>
-  );
-};
+
+class Sources extends React.Component {
+  handleQueryValue(href) {
+    browserHistory.push(href);
+  }
+  render() {
+    const { name, description, id, sortBysAvailable } = this.props;
+    return (
+      <div className="col m4">
+        <h5>{name}</h5>
+        <p>{description}</p>
+        <button className="btn btn-default" onClick={this.handleQueryValue.bind(this, `/headlines?name=${name}&id=${id}&sorts=${sortBysAvailable}`)} >More Info</button>
+      </div>
+    );
+  }
+}
 
 Sources.defaultProps = {
   name: '',
   description: '',
   id: '',
+  sortBysAvailable: [],
 };
 
 Sources.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   id: PropTypes.string,
+  sortBysAvailable: PropTypes.array,
 };
 
 export default Sources;
