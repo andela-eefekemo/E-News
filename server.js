@@ -1,13 +1,15 @@
+const path = require('path');
 const express = require('express');
 
-const app = express();
+module.exports = {
+  app: () => {
+    const app = express();
+    const indexPath = path.join(__dirname, './public/index.html');
+    const publicPath = express.static(path.join(__dirname, './public'));
 
-const port = process.env.PORT || 5000;
+    app.use('/public', publicPath);
+    app.get('/', (_, res) => { res.sendFile(indexPath); });
 
-app.get('/', (req, res) => {
-  res.send('working!!!!');
-});
-
-app.listen(port, () => {
-  console.log('listening on port: ', port);
-});
+    return app;
+  },
+};

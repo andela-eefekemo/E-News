@@ -1,5 +1,5 @@
 import Dispatcher from '../dispatcher';
-import * as newsApi from '../api/newsApi';
+import * as newsApi from '../utils/newsApi';
 
 export const getSource = (category) => {
   newsApi.getSources(category, (data) => {

@@ -1,5 +1,4 @@
 import React from 'react';
-import 'react-materialize';
 
 import NewsStore from '../stores/newsStore';
 import * as NewsActions from '../actions/newsAction';

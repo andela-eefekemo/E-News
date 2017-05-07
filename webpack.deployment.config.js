@@ -12,12 +12,12 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /.jsx?$/,
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        include: path.join(__dirname, 'app'),
-        exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react'],
+          presets: ['react', 'es2015', 'stage-0'],
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
         },
       },
     ],
