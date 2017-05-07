@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import PropTypes from 'prop-types';
 
 const Sources = (props) => {
   const { name, description, id } = props;
@@ -11,4 +12,17 @@ const Sources = (props) => {
     </div>
   );
 };
+
+Sources.defaultProps = {
+  name: '',
+  description: '',
+  id: '',
+};
+
+Sources.propTypes = {
+  name: PropTypes.string,
+  description: PropTypes.string,
+  id: PropTypes.string,
+};
+
 export default Sources;

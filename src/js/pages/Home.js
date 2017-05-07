@@ -36,7 +36,6 @@ export default class Home extends React.Component {
         data.push(source);
       }
     });
-    console.log(data);
     this.setState({
       sources: data,
     });
