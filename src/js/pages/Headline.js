@@ -18,6 +18,7 @@ class Headlines extends React.Component {
     this.sortsBy = [];
     this.name = '';
     this.id = '';
+    this.change = this.onChange.bind(this);
   }
 
   componentWillMount() {
@@ -55,7 +56,7 @@ class Headlines extends React.Component {
               <h1>{this.name}</h1>
             </div>
             <div className="col m4">
-              <select className="browser-default input-field" onChange={this.onChange.bind(this)} >
+              <select className="browser-default input-field" onChange={this.change} >
                 {sorted}
               </select>
             </div>
@@ -72,12 +73,10 @@ class Headlines extends React.Component {
 
 Headlines.defaultProps = {
   location: {},
-  query: {},
 };
 
 Headlines.propTypes = {
   location: PropTypes.Object,
-  query: PropTypes.Object,
 };
 
 export default Headlines;

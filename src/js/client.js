@@ -4,12 +4,13 @@ import { Router, Route, browserHistory } from 'react-router';
 
 import Headline from './pages/Headline';
 import Main from './pages/Main';
+import Login from './pages/Login';
 
 const app = document.getElementById('app');
 
 ReactDom.render(
   <Router history={browserHistory} >
-    <Route path="/" component={Main} />
-    <Route path="/headlines" component={Headline} />
+    <Route path="/" component={localStorage.User ? Main : Login} />
+    <Route path="/headlines" component={localStorage.User ? Headline : Login} />
   </Router>
   , app);
