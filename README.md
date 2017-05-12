@@ -1,16 +1,15 @@
-[![Code Climate](https://codeclimate.com/github/andela-moseni/inverted-index/badges/gpa.svg)](https://codeclimate.com/github/andela-moseni/inverted-index) [![Coverage Status](https://coveralls.io/repos/github/andela-eefekemo/E-News/badge.png?branch=development)](https://coveralls.io/github/andela-moseni/inverted-index?branch=development) [![Build Status](https://travis-ci.org/andela-moseni/inverted-index.svg?branch=development)](https://travis-ci.org/andela-moseni/inverted-index)
+[![Code Climate](https://codeclimate.com/github/andela-moseni/inverted-index/badges/gpa.svg)](https://codeclimate.com/github/andela-moseni/inverted-index) [![Coverage Status]
+[![Build Status](https://travis-ci.org/andela-eefekemo/E-News.svg?branch=master)](https://travis-ci.org/andela-eefekemo/E-News)
+[![Coverage Status](https://coveralls.io/repos/github/andela-eefekemo/E-News/badge.svg?branch=master)](https://coveralls.io/github/andela-eefekemo/E-News?branch=master)
 # E-News
 ## Introduction
-An Inverted Index is an Index Data Structure storing a mapping from content to location (i.e. a mapping of words or numbers to it's location in a database file). It use the elasticsearch method, which is designed to allow very fast full-text searches.
-The link to the hosted app [E-News](https://e--news.herokuapp.com)
+E-News is a News Feed Application that makes use of an API to display various News Sources with their corresponding Headlines based on the various options(top, latest e.t.c). The link to the hosted app [E-News](https://e--news.herokuapp.com)
 
 ## Features
 - Search for News Source
 - View Headlines based on News Source
 - Sort Headlines based on e.g Top Headlines, Latest Headlines
 
-### Why the project is useful
-The project implements Elasticsearch also known as Inverted Index which is known to achieve fast search responses because instead of searching the text directly, it searches an index instead.
 
 ### How users can get started with the project
   - Requirements
