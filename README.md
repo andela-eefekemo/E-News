@@ -53,7 +53,7 @@ When the app has started:
 - [E-News issues page](https://github.com/andela-eefekemo/E-News/issues)
 
 ### Resources
-- For further research on **Inverted index**, click [here](https://www.elastic.co/guide/en/elasticsearch/guide/current/inverted-index.html)
+- For further research on **The News Api**, click [here](https://newsapi.org/)
 
 ### License
   *  **MIT**
