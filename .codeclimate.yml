@@ -1,24 +1,17 @@
 engines:
   duplications:
-    enabled: false
+    enabled: true
     config:
       languages:
-        #mass_threshold: 30
         - javascript
   eslint:
     enabled: true
-    # ... CONFIG CONTENT ...
-    checks:
-      comma-dangle:
-        enabled: false
-  fixme:
-    enabled: true
+    config:
+      languages:
+        JavaScript: true
 ratings:
 paths:
     - "src/js"
-
-languages:
-  JavaScript: true
 exclude_paths:
 - "src/public
 - .gitignore
