@@ -6,8 +6,8 @@ module.exports = {
   entry: './src/js/client.js',
   output: {
     path: __dirname,
-    filename: 'client.min.js',
-    publicPath: '/public/assets',
+    filename: 'public/client.min.js',
+    publicPath: 'public',
   },
   module: {
     loaders: [

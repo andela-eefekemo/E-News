@@ -67,7 +67,7 @@
     ]
   },
   "scripts": {
-    "start": "npm build && node ./public/app.js",
+    "start": "npm run dev-start",
     "dev-start": "node ./public/app.js",
     "test": "jest --coverage",
     "build": "webpack --config ./webpack.deployment.config.js --progress --colors"
