@@ -1,0 +1,27 @@
+eslint:
+  enabled: true
+  config:
+    extensions:
+    - .es6
+    - .js
+    - .jsx
+
+ratings:
+   paths:
+   - "**.es6"
+   - "**.js"
+   - "**.jsx"
+
+languages:
+  JavaScript: true
+exclude_paths:
+- "src/public
+- .gitignore
+- .eslintignore
+- .travis.yml
+- .eslintrc.json
+- "src/__tests__/components/__snapshots__"
+- "webpack.config.js"
+- "webpack.deployment.config.js"
+- "server.js"
+- "coverage"
