@@ -1,16 +1,19 @@
-eslint:
-  enabled: true
-  config:
-    extensions:
-    - .es6
-    - .js
-    - .jsx
-
+engines:
+  duplications:
+    enabled: false
+    config:
+      languages:
+        #mass_threshold: 30
+        - javascript
+  eslint:
+    enabled: true
+    # ... CONFIG CONTENT ...
+    checks:
+      comma-dangle:
+        enabled: false
+  fixme:
+    enabled: true
 ratings:
-   paths:
-   - "**.es6"
-   - "**.js"
-   - "**.jsx"
 
 languages:
   JavaScript: true
