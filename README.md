@@ -1,4 +1,3 @@
-[![Code Climate](https://codeclimate.com/github/andela-moseni/inverted-index/badges/gpa.svg)](https://codeclimate.com/github/andela-moseni/inverted-index)
 [![Build Status](https://travis-ci.org/andela-eefekemo/E-News.svg?branch=master)](https://travis-ci.org/andela-eefekemo/E-News)
 [![Coverage Status](https://coveralls.io/repos/github/andela-eefekemo/E-News/badge.svg?branch=master)](https://coveralls.io/github/andela-eefekemo/E-News?branch=master)
 # E-News
