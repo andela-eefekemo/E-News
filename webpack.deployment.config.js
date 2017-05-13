@@ -1,9 +1,8 @@
-const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
   devtool: 'inline-sourcemap',
-  entry: './src/js/client.js',
+  entry: './src/js/client.jsx',
   output: {
     path: __dirname,
     filename: 'public/client.min.js',

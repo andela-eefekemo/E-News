@@ -1,6 +1,11 @@
 import Dispatcher from '../dispatcher';
 import * as newsApi from '../utils/newsApi';
 
+/**
+ * Gets the list of sources from Api
+ * @param {string} category sortsBy category for string
+ * @return {void}
+ */
 export const getSource = (category) => {
   newsApi.getSources(category, (data) => {
     Dispatcher.dispatch({
@@ -10,6 +15,12 @@ export const getSource = (category) => {
   });
 };
 
+/**
+ * Gets the list of articles from selected source
+ * @param {string} source Source for article selection
+ * @param {string} sortBy SortBy for article
+ * @return {void}
+ */
 export const getArticle = (source, sortBy) => {
   newsApi.getArticles(source, sortBy, (data) => {
     Dispatcher.dispatch({
