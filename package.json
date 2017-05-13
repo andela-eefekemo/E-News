@@ -69,6 +69,7 @@
   },
   "scripts": {
     "start": "npm run dev-start",
+    "update": "jest --updateSnapshot",
     "dev-start": "node ./public/app.js",
     "test": "jest --coverage",
     "build": "webpack --config ./webpack.deployment.config.js --progress --colors"

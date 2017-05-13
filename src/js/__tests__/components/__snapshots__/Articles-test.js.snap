@@ -12,6 +12,7 @@ exports[`Article Component 1`] = `
     >
       <img
         alt="Headline"
+        src=""
       />
       <span
         className="card-title"
@@ -26,6 +27,8 @@ exports[`Article Component 1`] = `
       className="card-action"
     >
       <a
+        href=""
+        rel="noopener noreferrer"
         target="_blank"
       >
         View More
