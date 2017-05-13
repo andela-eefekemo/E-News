@@ -87,7 +87,7 @@ Headlines.defaultProps = {
 };
 
 Headlines.propTypes = {
-  location: PropTypes.Object,
+  location: PropTypes.object,
 };
 
 export default Headlines;

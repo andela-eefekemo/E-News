@@ -15,8 +15,8 @@ Dropdown.defaultProps = {
 };
 
 Dropdown.propTypes = {
-  value: PropTypes.String,
-  text: PropTypes.String,
+  value: PropTypes.string,
+  text: PropTypes.string,
 };
 
 export default Dropdown;
