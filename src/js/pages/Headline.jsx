@@ -14,8 +14,10 @@ import Articles from '../components/Articles.jsx';
 class Headlines extends React.Component {
   constructor() {
     super();
+    this.api = NewsStore.getArticles();
     this.state = {
-      articles: NewsStore.getArticles(),
+      articles: this.api,
+      name: 'articles',
     };
     this.article = this.getArticle.bind(this);
     this.sortsBy = [];
@@ -59,7 +61,7 @@ class Headlines extends React.Component {
     return (
       <div>
         <Nav />
-        <div className="container">
+        <div className="container" id={this.state.name}>
           <div className="row">
             <div className="col m8">
               <h1>{this.name}</h1>

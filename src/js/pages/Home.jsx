@@ -12,6 +12,7 @@ export default class Home extends React.Component {
     super();
     this.state = {
       sources: NewsStore.getSources(),
+      name: 'sources',
     };
     this.sources = this.getNews.bind(this);
     this.filter = this.filterSources.bind(this);
@@ -58,7 +59,7 @@ export default class Home extends React.Component {
         <div className="row">
           <div className="col m8">
             <input
-              id="source_search"
+              id={this.state.name}
               type="text"
               className="validate"
               placeholder="Search for sources"

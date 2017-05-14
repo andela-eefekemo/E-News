@@ -1,17 +1,48 @@
 import dispatcher from '../../dispatcher';
+import mock_api from '../../__mocks__/mock-api.json';
 import newsStore from '../../stores/newsStore';
-import * as newsAction from '../../actions/newsAction';
 
 jest.mock('../../dispatcher');
-jest.dontMock('../../stores/newsStore');
-jest.dontMock('../../actions/newsAction');
-describe('AdminStore', () => {
-  let callback
+// jest.dontMock('../../stores/newsStore');
+describe('newsStore', () => {
+  let newsStore;
+  let callback;
+  const news = {
+    type: 'GET_ARTICLES',
+    mock_api,
+  };
+  
+  const channel = {
+    type: 'GET_SOURCES',
+    mock_api,
+  }
+  
   beforeEach(() => {
+    jest.resetModules();
+    newsStore = require('../../stores/newsStore').default;
     callback = dispatcher.register.mock.calls[0][0];
   });
-  it('should initialize with a articles total of 0', () => {
-    let total = newsStore.getArticles().length;
-    expect(total).toBe(0);
+
+  it('register a call with the dispatcher', () => {
+    expect(dispatcher.register.mock.calls.length).toBe(1);
   });
+
+  it('should initialize with no article', () => {
+    expect(newsStore.articles.length).toBe(0);
+  });
+
+  it('stores mock', () => {
+    callback(news);
+    expect(newsStore.articles).toEqual([]);
+  });
+ 
+  it('should initialize with no article', () => {
+    expect(newsStore.sources.length).toBe(0);
+  });
+
+  it('stores mock', () => {
+    callback(channel);
+    expect(newsStore.sources).toEqual([]);
+  });
+
 });

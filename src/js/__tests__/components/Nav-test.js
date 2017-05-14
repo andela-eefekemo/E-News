@@ -6,8 +6,12 @@ import Nav from '../../components/layout/Nav';
 
 
 test('Navbar component', () => {
-
-  localStorage.removeItem('User');
+  
+  const userProfile = {
+    name:'Eguono',
+    email:'john.doe'
+  }
+  localStorage.setItem('User', userProfile);
   const component = mount(<Nav />);
   const tree = toJson(component);
   expect(tree).toMatchSnapshot();
