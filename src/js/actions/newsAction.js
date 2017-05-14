@@ -6,8 +6,8 @@ import * as newsApi from '../utils/newsApi';
  * @param {string} category sortsBy category for string
  * @return {void}
  */
-export const getSource = (category) => {
-  newsApi.getSources(category, (data) => {
+export const getSource = () => {
+  newsApi.getSources((data) => {
     Dispatcher.dispatch({
       type: 'GET_SOURCES',
       data,
