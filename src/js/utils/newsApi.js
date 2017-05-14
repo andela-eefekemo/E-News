@@ -5,23 +5,13 @@ import axios from 'axios';
  * @param {string} category - Set default to null
  * @param {function} callback
  */
-export const getSources = (category = null, callback) => {
+export const getSources = (callback) => {
   const api = 'https://newsapi.org/v1/sources';
-
-  if (category === null) {
-    axios.get(api)
-      .then(response => callback(response.data.sources))
-      .catch((error) => {
-        console.log(error);
-      });
-  } else {
-    const link = `${api}'?category='${category}`;
-    axios.get(link)
-      .then(response => callback(response.data.sources))
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+  axios.get(api)
+    .then(response => callback(response.data.sources))
+    .catch((error) => {
+      console.log(error);
+    });
 };
 /**
  * @function getArticles - Get articles from Api using Axois
