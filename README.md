@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/andela-eefekemo/E-News.svg?branch=master)](https://travis-ci.org/andela-eefekemo/E-News)
-[![Coverage Status](https://coveralls.io/repos/github/andela-eefekemo/E-News/badge.svg?branch=master)](https://coveralls.io/github/andela-eefekemo/E-News?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/andela-eefekemo/E-News/badge.png?branch=master)](https://coveralls.io/github/andela-eefekemo/E-News?branch=master)
 # E-News
 ## Introduction
 E-News is a News Feed Application that makes use of an API to display various News Sources with their corresponding Headlines based on the various options(top, latest e.t.c). The link to the hosted app [E-News](https://e--news.herokuapp.com)
