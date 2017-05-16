@@ -8,6 +8,7 @@
     "babel-loader": "^7.0.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "dotenv": "^4.0.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
@@ -63,12 +64,10 @@
     },
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
-      "<rootDir>/node_modules/react-dom",
-      "<rootDir>/node_modules/fbjs"
+      "<rootDir>/node_modules/react-dom"
     ],
     "setupFiles": [
-      "<rootDir>/src/js/__mocks__/browserMocks.js",
-      "<rootDir>/src/js/__mocks__/axiosMock.js"
+      "<rootDir>/src/js/__mocks__/browserMocks.js"
     ]
   },
   "scripts": {
@@ -76,7 +75,8 @@
     "update": "jest --updateSnapshot",
     "dev-start": "node ./public/app.js",
     "test": "jest --coverage",
-    "build": "webpack --config ./webpack.deployment.config.js --progress --colors"
+    "build": "webpack --config ./webpack.deployment.config.js --progress --colors",
+    "watch": "webpack --config ./webpack.deployment.config.js --progress --colors --watch"
   },
   "repository": {
     "type": "git",

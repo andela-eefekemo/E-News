@@ -2,7 +2,7 @@ import api from './mock-api.json';
 
 const apiCall = {
   get() {
-    return Promise.resolve(api);
+    return (Promise.resolve(api));
   },
 };
 

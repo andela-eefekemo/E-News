@@ -6,7 +6,7 @@ const Article = (props) => {
   const { urlToImage, description, title, url } = props;
   return (
 
-    <div className="col s12 m5">
+    <div className="col m5">
       <div className="card">
         <div className="card-image">
           <img src={urlToImage} alt="Headline" />

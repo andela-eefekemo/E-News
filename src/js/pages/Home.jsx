@@ -17,8 +17,8 @@ export default class Home extends React.Component {
     this.sources = this.getNews.bind(this);
     this.filter = this.filterSources.bind(this);
   }
-  // componentWillMount - Runs when component is loaded
-  componentWillMount() {
+  // componentDidMount - Runs when component is loaded
+  componentDidMount() {
     NewsActions.getSource();
     NewsStore.on('changes', this.sources);
   }
@@ -52,7 +52,6 @@ export default class Home extends React.Component {
 
   render() {
     const { sources } = this.state;
-
     const NewsComponents = sources.map(source => <Sources key={source.id} {...source} />);
     return (
       <div className="container">
@@ -64,22 +63,6 @@ export default class Home extends React.Component {
               className="validate"
               placeholder="Search for sources"
               onChange={this.filter} />
-          </div>
-          <div className="col m4">
-            <form>
-              <select className="browser-default input-field">
-                <option value="">All</option>
-                <option value="business">Business</option>
-                <option value="entertainment">Entertainment</option>
-                <option value="gaming">Gaming</option>
-                <option value="general">General</option>
-                <option value="music">Music</option>
-                <option value="politics">Politics</option>
-                <option value="science-and-nature">Science and Nature</option>
-                <option value="sport">Sport</option>
-                <option value="technology">Technology</option>
-              </select>
-            </form>
           </div>
         </div>
         <div className="row">

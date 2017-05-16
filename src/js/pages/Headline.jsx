@@ -12,8 +12,8 @@ import Articles from '../components/Articles.jsx';
  * Headlines React Component
  */
 class Headlines extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.api = NewsStore.getArticles();
     this.state = {
       articles: this.api,
@@ -25,16 +25,16 @@ class Headlines extends React.Component {
     this.id = '';
     this.change = this.onChange.bind(this);
   }
-  // componentWillMount - Runs when component is loaded
-  componentWillMount() {
+  // componentDidMount - Runs when component is loaded
+  componentDidMount() {
     const { location } = this.props;
     const { query } = location;
-    const sorts = query.sorts.split(',');
-    this.sortsBy = sorts.map(sort => sort);
+    this.sorts = query.sorts.split(',');
+    this.sortsBy = this.sorts.map(sort => sort);
     this.name = query.name;
     this.id = query.id;
     NewsStore.on('changes', this.article);
-    NewsActions.getArticle(query.id, sorts[0]);
+    NewsActions.getArticle(query.id, this.sorts[0]);
   }
   // componentWillUnMount - Runs when component is unloaded(changed)
   componentWillUnmount() {
@@ -69,7 +69,7 @@ class Headlines extends React.Component {
             <div className="col m4">
               <select
                 className="browser-default input-field"
-                onChange={this.change} >
+                onChange={this.change}>
                 {sorted}
               </select>
             </div>
@@ -85,7 +85,11 @@ class Headlines extends React.Component {
 }
 // sets default propstype
 Headlines.defaultProps = {
-  location: {},
+  location: {
+    query: {
+      sorts: 'top',
+    },
+  },
 };
 
 Headlines.propTypes = {

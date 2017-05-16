@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 // Sources Component
 class Sources extends React.Component {
+
   handleQueryValue(href) {
     browserHistory.push(href);
   }

@@ -1,20 +1,21 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
+import renderer from 'react-test-renderer'
 
 import Headline from '../../pages/Headline';
-
+import Articles from '../../components/Articles.jsx';
 
 test('Headline Component', () => {
-  const component = mount(<Headline />);
-  const tree = toJson(component);
+  const component = toJson(mount(<Headline sorts="top"/>));
+  expect(component).toMatchSnapshot();
+});
+
+test('Component render a button', () => {
+
+  const component = renderer.create(
+    <Articles/>,
+  );
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-  expect(component.find('#articles').length).toBe(1);
-  expect(component.find('#bar').length).toBe(0);
-  component.setState({ name: 'bar' });
-  expect(component.find('#articles').length).toBe(0);
-  expect(component.find('#bar').length).toBe(1);
-  expect(component.props().location.query.sorts).toBe(String);
-  component.setProps({ bar: "foo" });
-  expect(component.props().bar).to.equal("foo");
 });
