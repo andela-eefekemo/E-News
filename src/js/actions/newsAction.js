@@ -1,6 +1,6 @@
 import Dispatcher from '../dispatcher';
 import * as newsApi from '../utils/newsApi';
-
+import * as constants from '../constants/constants';
 /**
  * Gets the list of sources from Api
  * @param {string} category sortsBy category for string
@@ -9,7 +9,7 @@ import * as newsApi from '../utils/newsApi';
 export const getSource = () => {
   newsApi.getSources((data) => {
     Dispatcher.dispatch({
-      type: 'GET_SOURCES',
+      type: constants.Articles,
       data,
     });
   });
@@ -24,7 +24,7 @@ export const getSource = () => {
 export const getArticle = (source, sortBy) => {
   newsApi.getArticles(source, sortBy, (data) => {
     Dispatcher.dispatch({
-      type: 'GET_ARTICLES',
+      type: constants.Sources,
       data,
     });
   });

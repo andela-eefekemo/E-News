@@ -9,6 +9,7 @@ module.exports = {
 
     app.use('/public', publicPath);
     app.get('/', (req, res) => { res.sendFile(indexPath); });
+    app.all('*', (req, res) => { res.sendFile(indexPath); });
 
     return app;
   },

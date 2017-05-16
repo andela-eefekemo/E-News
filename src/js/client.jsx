@@ -14,6 +14,6 @@ const app = document.getElementById('app');
 ReactDom.render(
   <Router history={browserHistory} >
     <Route path="/" component={localStorage.User ? Main : Login} />
-    <Route path="/headlines" component={localStorage.User ? Headline : Login} />
+    <Route path="headlines" component={localStorage.User ? Headline : Login} />
   </Router>
   , app);

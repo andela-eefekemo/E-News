@@ -65,22 +65,6 @@ export default class Home extends React.Component {
               placeholder="Search for sources"
               onChange={this.filter} />
           </div>
-          <div className="col m4">
-            <form>
-              <select className="browser-default input-field">
-                <option value="">All</option>
-                <option value="business">Business</option>
-                <option value="entertainment">Entertainment</option>
-                <option value="gaming">Gaming</option>
-                <option value="general">General</option>
-                <option value="music">Music</option>
-                <option value="politics">Politics</option>
-                <option value="science-and-nature">Science and Nature</option>
-                <option value="sport">Sport</option>
-                <option value="technology">Technology</option>
-              </select>
-            </form>
-          </div>
         </div>
         <div className="row">
           <div>

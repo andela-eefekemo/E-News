@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Article Component 1`] = `
+exports[`Component render a button 1`] = `
 <div
   className="col l5 m5 s12"
 >
@@ -16,12 +16,16 @@ exports[`Article Component 1`] = `
       />
       <span
         className="card-title"
-      />
+      >
+        BBC world news
+      </span>
     </div>
     <div
       className="card-content"
     >
-      <p />
+      <p>
+        
+      </p>
     </div>
     <div
       className="card-action"

@@ -1,5 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component render a button 1`] = `
+<div
+  className="col m4"
+>
+  <h5>
+    BBC News
+  </h5>
+  <p>
+    
+  </p>
+  <button
+    className="btn btn-default"
+    onClick={[Function]}
+  >
+    More Info
+  </button>
+</div>
+`;
+
 exports[`Home Component 1`] = `
 <Home>
   <div

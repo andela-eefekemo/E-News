@@ -1,6 +1,7 @@
 import { EventEmitter } from 'events';
 
 import Dispatcher from '../dispatcher';
+import * as constants from '../constants/constants';
 
 // NewsStore class
 class NewsStore extends EventEmitter {
@@ -31,11 +32,11 @@ class NewsStore extends EventEmitter {
    */
   updateNews(action) {
     switch (action.type) {
-      case 'GET_SOURCES':
+      case constants.Sources:
         this.sources = action.data;
         this.emit('changes');
         break;
-      case 'GET_ARTICLES':
+      case constants.Articles:
         this.articles = action.data;
         this.emit('changes');
         break;

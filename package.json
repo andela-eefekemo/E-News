@@ -63,12 +63,10 @@
     },
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
-      "<rootDir>/node_modules/react-dom",
-      "<rootDir>/node_modules/fbjs"
+      "<rootDir>/node_modules/react-dom"
     ],
     "setupFiles": [
-      "<rootDir>/src/js/__mocks__/browserMocks.js",
-      "<rootDir>/src/js/__mocks__/axiosMock.js"
+      "<rootDir>/src/js/__mocks__/browserMocks.js"
     ]
   },
   "scripts": {
