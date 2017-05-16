@@ -11,8 +11,8 @@ import Dropdown from '../../components/Dropdown.jsx';
 
 
 test('Headline Component', () => {
-  const component = mount(<Headline />);
-  const tree = toJson(component);
+  const component = renderer.create(<Headline sorts="top"/>);
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
   expect(component.find('#articles').length).toBe(1);
   expect(component.find('#bar').length).toBe(0);
@@ -43,7 +43,7 @@ test('Component render a button', () => {
 
 test('Link onclick should execute the function in the prop', () => {
   const onChange = jest.fn();
-  const component = mount(<Headline />);
+  const component = mount(<Headline sorts="tops"/>);
   const link = component.find('select');
   link.simulate('change');
   expect(onChange).toBeCalled();

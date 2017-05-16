@@ -1,4 +1,4 @@
-import * as newsApi from '../../actions/newsAction';
+import newsAction from '../../actions/newsAction';
 import mockedAxios from '../../__mocks__/axios';
 import dispatcher from '../../dispatcher';
 import newsStore from '../../stores/newsStore';
@@ -16,14 +16,13 @@ describe('#getNews() using Promises', () => {
     dispatchSpy.mockReset();
   });
 
-  it('should load news data', () => newsApi.getArticle('the-next-web', 'latest')
-    .then(() => {
-      const arg = dispatchSpy.mock.calls[0][0];
-      expect(dispatchSpy).toHaveBeenCalled();
-      expect(arg.eventName).toEqual(constants.GET_ARTICLES);
-      expect(arg.news).toBeInstanceOf(Object);
-      expect(arg.news[0].meta).toEqual('BBC News');
-    }));
+  it('should load news data', () => {
+    newsAction.getArticle('the-next-web', 'latest')
+    const arg = dispatchSpy.mock.calls[0][0];
+    expect(dispatchSpy).toHaveBeenCalled();
+    expect(arg.eventName).toEqual(constants.GET_ARTICLES);
+    expect(arg.news).toBeInstanceOf(Object);
+    expect(arg.news[0].meta).toEqual('BBC News');
+  });
 });
-
 

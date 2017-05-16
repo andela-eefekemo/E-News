@@ -34,7 +34,7 @@ class Headlines extends React.Component {
     this.name = query.name;
     this.id = query.id;
     NewsStore.on('changes', this.article);
-    NewsActions.getArticle(query.id, sorts[0]);
+    NewsActions.getArticle(query.id, this.sorts[0]);
   }
   // componentWillUnMount - Runs when component is unloaded(changed)
   componentWillUnmount() {
@@ -86,10 +86,12 @@ class Headlines extends React.Component {
 // sets default propstype
 Headlines.defaultProps = {
   location: {},
+  sorts: 'top',
 };
 
 Headlines.propTypes = {
   location: PropTypes.object,
+  sorts: PropTypes.string,
 };
 
 export default Headlines;

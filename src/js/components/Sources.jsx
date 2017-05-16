@@ -4,10 +4,7 @@ import PropTypes from 'prop-types';
 
 // Sources Component
 class Sources extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleQuery = this.handleQueryValue.bind(this);
-  }
+
   handleQueryValue(href) {
     browserHistory.push(href);
   }
@@ -15,12 +12,12 @@ class Sources extends React.Component {
     const { name, description, id, sortBysAvailable } = this.props;
     const link = `/headlines?name=${name}&id=${id}&sorts=${sortBysAvailable}`;
     return (
-      <div className="col l3 m4 s12">
+      <div className="col m4">
         <h5>{name}</h5>
         <p>{description}</p>
         <button
           className="btn btn-default"
-          onClick={this.handleQuery(link)} >
+          onClick={this.handleQueryValue.bind(this, link)} >
           More Info
         </button>
       </div>
