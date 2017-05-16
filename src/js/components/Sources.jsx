@@ -12,9 +12,9 @@ class Sources extends React.Component {
     const { name, description, id, sortBysAvailable } = this.props;
     const link = `/headlines?name=${name}&id=${id}&sorts=${sortBysAvailable}`;
     return (
-      <div className="col m4">
+      <div className="col s12 m6 l4">
         <h5>{name}</h5>
-        <p>{description}</p>
+        <p className="truncate">{description}</p>
         <button
           className="btn btn-default"
           onClick={this.handleQueryValue.bind(this, link)} >
