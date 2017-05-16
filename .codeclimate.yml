@@ -1,0 +1,25 @@
+engines:
+  duplications:
+    enabled: true
+    config:
+      languages:
+        - javascript
+  eslint:
+    enabled: true
+    config:
+      languages:
+        JavaScript: true
+ratings:
+paths:
+    - "src/js"
+exclude_paths:
+- "src/public
+- .gitignore
+- .eslintignore
+- .travis.yml
+- .eslintrc.json
+- "src/__tests__/components/__snapshots__"
+- "webpack.config.js"
+- "webpack.deployment.config.js"
+- "server.js"
+- "coverage"

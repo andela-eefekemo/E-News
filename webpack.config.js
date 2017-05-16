@@ -3,11 +3,11 @@ const webpack = require('webpack');
 
 module.exports = {
   devtool: 'inline-sourcemap',
-  entry: './src/js/client.js',
+  entry: './src/js/client.jsx',
   output: {
     path: __dirname,
-    filename: 'client.min.js',
-    publicPath: '/public/assets',
+    filename: 'public/client.min.js',
+    publicPath: 'public',
   },
   module: {
     loaders: [

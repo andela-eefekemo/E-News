@@ -1,40 +1,16 @@
 import axios from 'axios';
 
-export const getSources = (category = null, callback) => {
-  const api = 'https://newsapi.org/v1/sources';
-
-  if (category === null) {
-    axios.get(api)
-      .then(response => callback(response.data.sources))
-      .catch((error) => {
-        console.log(error);
-      });
-  } else {
-    const link = api + '?category=' + category;
-    axios.get(link)
-      .then(response => callback(response.data.sources))
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+/**
+ * @function getArticles - Get articles from Api using Axois
+ * @param {string} category - Set default to null
+ * @param {string} sortBy
+ * @param {function} callback
+ */
+const get = {
+  get: link => axios.get(link)
+      .then(response => response.data)
+      .catch(error => error),
 };
 
-export const getArticles = (source, sortBy = null, callback) => {
-  const api = 'https://newsapi.org/v1/articles?source=';
 
-  if (sortBy === null) {
-    const link = api + source;
-    axios.get(link)
-      .then(response => callback(response.data.articles))
-      .catch((error) => {
-        console.log(error);
-      });
-  } else {
-    const link = api + source + '&sortBy=' + sortBy;
-    axios.get(link)
-      .then(response => callback(response.data.articles))
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-};
+export default get;

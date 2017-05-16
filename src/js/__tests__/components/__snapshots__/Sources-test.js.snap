@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sources Component 1`] = `
+<Sources
+  description=""
+  id=""
+  name=""
+  sortBysAvailable={Array []}
+>
+  <div
+    className="col m4"
+  >
+    <h5 />
+    <p />
+    <button
+      className="btn btn-default"
+      onClick={[Function]}
+    >
+      More Info
+    </button>
+  </div>
+</Sources>
+`;

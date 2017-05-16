@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component render a button 1`] = `
+<div
+  className="col m4"
+>
+  <h5>
+    BBC News
+  </h5>
+  <p>
+    
+  </p>
+  <button
+    className="btn btn-default"
+    onClick={[Function]}
+  >
+    More Info
+  </button>
+</div>
+`;
+
+exports[`Home Component 1`] = `
+<Home>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col m8"
+      >
+        <input
+          className="validate"
+          id="sources"
+          onChange={[Function]}
+          placeholder="Search for sources"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div />
+    </div>
+  </div>
+</Home>
+`;

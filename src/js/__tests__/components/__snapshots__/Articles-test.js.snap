@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Component 1`] = `
+<div
+  className="col m5"
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-image"
+    >
+      <img
+        alt="Headline"
+        src=""
+      />
+      <span
+        className="card-title"
+      />
+    </div>
+    <div
+      className="card-content"
+    >
+      <p />
+    </div>
+    <div
+      className="card-action"
+    >
+      <a
+        href=""
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        View More
+      </a>
+    </div>
+  </div>
+</div>
+`;
