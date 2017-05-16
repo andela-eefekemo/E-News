@@ -8,7 +8,7 @@ exports[`Sources Component 1`] = `
   sortBysAvailable={Array []}
 >
   <div
-    className="col l3 m4 s12"
+    className="col m4"
   >
     <h5 />
     <p />

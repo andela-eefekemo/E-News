@@ -2,7 +2,7 @@
 
 exports[`Article Component 1`] = `
 <div
-  className="col l5 m5 s12"
+  className="col m5"
 >
   <div
     className="card"

@@ -8,11 +8,12 @@ import * as constants from '../constants/constants';
  */
 export const getSource = () => {
   const link = 'https://newsapi.org/v1/sources';
-  const data = newsApi.get(link);
-  console.log(data);
-  Dispatcher.dispatch({
-    type: constants.Sources,
-    data,
+  newsApi.get(link).then((source) => {
+    const data = source.sources;
+    Dispatcher.dispatch({
+      type: constants.Sources,
+      data,
+    });
   });
 };
 
@@ -24,11 +25,13 @@ export const getSource = () => {
  */
 export const getArticle = (source, sortBy) => {
   const api = 'https://newsapi.org/v1/articles?source=';
-  const key = '&apiKey=213327409d384371851777e7c7f78dfe';
-  const link = `${api}${source}&sortBy=${sortBy}${key}`;
-  const data = newsApi.get(link);
-  Dispatcher.dispatch({
-    type: constants.Articles,
-    data,
+  const key = '213327409d384371851777e7c7f78dfe';
+  const link = `${api}${source}&sortBy=${sortBy}&apiKey=${key}`;
+  newsApi.get(link).then((article) => {
+    const data = article.articles;
+    Dispatcher.dispatch({
+      type: constants.Articles,
+      data,
+    });
   });
 };

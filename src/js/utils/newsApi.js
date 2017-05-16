@@ -7,13 +7,9 @@ import axios from 'axios';
  * @param {function} callback
  */
 const get = {
-  get: (link) => {
-    axios.get(link)
-      .then(response => response.data.articles)
-      .catch((error) => {
-        console.log(error);
-      });
-  },
+  get: link => axios.get(link)
+      .then(response => response.data)
+      .catch(error => error),
 };
 
 

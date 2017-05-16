@@ -85,13 +85,15 @@ class Headlines extends React.Component {
 }
 // sets default propstype
 Headlines.defaultProps = {
-  location: {},
-  sorts: 'top',
+  location: {
+    query: {
+      sorts: 'top',
+    },
+  },
 };
 
 Headlines.propTypes = {
   location: PropTypes.object,
-  sorts: PropTypes.string,
 };
 
 export default Headlines;

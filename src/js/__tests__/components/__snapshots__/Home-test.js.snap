@@ -2,7 +2,7 @@
 
 exports[`Component render a button 1`] = `
 <div
-  className="col l3 m4 s12"
+  className="col m4"
 >
   <h5>
     BBC News

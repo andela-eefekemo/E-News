@@ -45,7 +45,7 @@ class NewsStore extends EventEmitter {
     }
   }
 }
-// Creates an subclass pf NewsStore
+// Creates an subclass of NewsStore
 const newsstore = new NewsStore();
 // Registers the store to recieve actions from the dispatcher
 Dispatcher.register(newsstore.updateNews.bind(newsstore));

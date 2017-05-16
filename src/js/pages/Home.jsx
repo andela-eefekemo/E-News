@@ -17,7 +17,7 @@ export default class Home extends React.Component {
     this.sources = this.getNews.bind(this);
     this.filter = this.filterSources.bind(this);
   }
-  // componentWillMount - Runs when component is loaded
+  // componentDidMount - Runs when component is loaded
   componentDidMount() {
     NewsActions.getSource();
     NewsStore.on('changes', this.sources);
@@ -52,7 +52,6 @@ export default class Home extends React.Component {
 
   render() {
     const { sources } = this.state;
-    console.log(sources);
     const NewsComponents = sources.map(source => <Sources key={source.id} {...source} />);
     return (
       <div className="container">

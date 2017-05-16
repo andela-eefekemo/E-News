@@ -2,7 +2,7 @@
 
 exports[`Component render a button 1`] = `
 <div
-  className="col l5 m5 s12"
+  className="col m5"
 >
   <div
     className="card"
@@ -17,7 +17,7 @@ exports[`Component render a button 1`] = `
       <span
         className="card-title"
       >
-        BBC world news
+        
       </span>
     </div>
     <div
@@ -40,4 +40,153 @@ exports[`Component render a button 1`] = `
     </div>
   </div>
 </div>
+`;
+
+exports[`Headline Component 1`] = `
+<Headlines
+  location={
+    Object {
+      "query": Object {
+        "sorts": "top",
+      },
+    }
+  }
+  sorts="top"
+>
+  <div>
+    <Nav>
+      <div>
+        <nav>
+          <div
+            className="nav-wrapper teal lighten-1"
+          >
+            <div
+              className="button-collapse"
+              data-activates="mobile-demo"
+            >
+              <i
+                className="material-icons"
+              >
+                menu
+              </i>
+            </div>
+            <ul
+              className="right hide-on-med-and-down"
+            >
+              <li>
+                <IndexLink
+                  to="/"
+                >
+                  <Link
+                    onlyActiveOnIndex={true}
+                    style={Object {}}
+                    to="/"
+                  >
+                    <a
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      Home
+                    </a>
+                  </Link>
+                </IndexLink>
+              </li>
+              <li>
+                <Link
+                  onClick={[Function]}
+                  onlyActiveOnIndex={false}
+                  style={Object {}}
+                  to="/logout"
+                >
+                  <a
+                    onClick={[Function]}
+                    style={Object {}}
+                  >
+                    Logout
+                  </a>
+                </Link>
+              </li>
+            </ul>
+            <ul
+              className="side-nav"
+              id="mobile-demo"
+            >
+              <li>
+                <Link
+                  onlyActiveOnIndex={false}
+                  style={Object {}}
+                  to="/"
+                >
+                  <a
+                    onClick={[Function]}
+                    style={Object {}}
+                  >
+                    Home
+                  </a>
+                </Link>
+              </li>
+              <li>
+                 
+                <Link
+                  onClick={[Function]}
+                  onlyActiveOnIndex={false}
+                  style={Object {}}
+                  to="/logout"
+                >
+                  <a
+                    onClick={[Function]}
+                    style={Object {}}
+                  >
+                    Logout
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </Nav>
+    <div
+      className="container"
+      id="articles"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col m8"
+        >
+          <h1 />
+        </div>
+        <div
+          className="col m4"
+        >
+          <select
+            className="browser-default input-field"
+            onChange={[Function]}
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      />
+    </div>
+    <Footer>
+      <div
+        className="footer"
+      >
+        <p
+          className="center-align"
+        >
+          © 2017 | E-News
+        </p>
+        <p
+          className="center-align"
+        >
+          Developed by: Efekemo Eguonoghene
+        </p>
+      </div>
+    </Footer>
+  </div>
+</Headlines>
 `;
