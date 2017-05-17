@@ -3,7 +3,6 @@ import mock_api from '../../__mocks__/mock-api.json';
 import newsStore from '../../stores/newsStore';
 
 jest.mock('../../dispatcher');
-// jest.dontMock('../../stores/newsStore');
 describe('newsStore', () => {
   let newsStore;
   let callback;
