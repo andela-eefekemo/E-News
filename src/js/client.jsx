@@ -6,6 +6,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import Headline from './pages/Headline.jsx';
 import Main from './pages/Main.jsx';
 import Login from './pages/Login.jsx';
+import '../../public/sass/style.scss';
 
 // Gets element with id:app
 const app = document.getElementById('app');

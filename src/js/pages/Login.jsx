@@ -31,7 +31,7 @@ const Login = () => {
     console.log(response);
   };
   return (
-    <div className="slider fullscreen">
+    <div className="slider fullscreen valign-wrapper">
       <GoogleLogin
         clientId={id}
         tag="span"

@@ -6,14 +6,14 @@ const Article = (props) => {
   const { urlToImage, description, title, url } = props;
   return (
 
-    <div className="col m5">
-      <div className="card">
+    <div className="col s12 m6 l4">
+      <div className="card card-panel hoverable">
         <div className="card-image">
           <img src={urlToImage} alt="Headline" />
           <span className="card-title">{title}</span>
         </div>
         <div className="card-content">
-          <p>{description}</p>
+          <p className="truncate">{description}</p>
         </div>
         <div className="card-action">
           <a href={url} target="_blank" rel="noopener noreferrer">View More</a>
