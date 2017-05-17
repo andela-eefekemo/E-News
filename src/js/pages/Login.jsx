@@ -32,21 +32,30 @@ const Login = () => {
   };
   return (
     <div className="slider fullscreen valign-wrapper">
-      <GoogleLogin
-        clientId={id}
-        tag="span"
-        onSuccess={responseSuccess}
-        onFailure={responseFailure}
-        disabled="false"
-        style={{ opacity: 1 }}
-      >
-        <span
-          className="btn waves-effect waves-light"
-          name="action">
-          Login with Google
+      <ul class="slides">
+        <li>
+          <img src="public/img/home.jpg" />
+          <div className="caption center-align">
+            <h3 className="light black-text text-lighten-3">E-News</h3>
+            <h5 className="light black-text text-lighten-3">View Headlines as it happens</h5>
+            <GoogleLogin
+              clientId={id}
+              tag="span"
+              onSuccess={responseSuccess}
+              onFailure={responseFailure}
+              disabled="false"
+              style={{ opacity: 1 }}
+            >
+              <span
+                className="btn waves-effect waves-light"
+                name="action">
+                Login with Here
                 <i className="material-icons right">send</i>
-        </span>
-      </GoogleLogin>
+              </span>
+            </GoogleLogin>
+          </div>
+        </li>
+      </ul>
 
     </div>
   );
