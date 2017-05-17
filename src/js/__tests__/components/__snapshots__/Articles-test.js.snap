@@ -26,15 +26,27 @@ exports[`Article Component 1`] = `
       />
     </div>
     <div
-      className="card-action"
+      className="row"
     >
-      <a
-        href=""
-        rel="noopener noreferrer"
-        target="_blank"
+      <div
+        className="card-action col s6"
       >
-        View More
-      </a>
+        <a
+          href=""
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          View More
+        </a>
+      </div>
+      <div
+        className="col s6"
+      >
+        <Share
+          share=""
+          title=""
+        />
+      </div>
     </div>
   </div>
 </div>
