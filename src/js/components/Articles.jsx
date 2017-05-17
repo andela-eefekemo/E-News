@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Share from './Share.jsx';
+
 // Article Component
 const Article = (props) => {
   const { urlToImage, description, title, url } = props;
@@ -15,8 +17,13 @@ const Article = (props) => {
         <div className="card-content">
           <p className="truncate">{description}</p>
         </div>
-        <div className="card-action">
-          <a href={url} target="_blank" rel="noopener noreferrer">View More</a>
+        <div className="row">
+          <div className="card-action col s6">
+            <a href={url} target="_blank" rel="noopener noreferrer">View More</a>
+          </div>
+          <div className="col s6">
+            <Share share={url} title={title} />
+          </div>
         </div>
       </div>
     </div>
