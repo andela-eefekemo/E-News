@@ -1,7 +1,7 @@
 /* global location localStorage*/
 import React from 'react';
 import { IndexLink, Link } from 'react-router';
-
+import PropTypes from 'prop-types';
 // Nav Component
 const Nav = (props) => {
   /**
@@ -48,6 +48,21 @@ const Nav = (props) => {
       </nav>
     </div>
   );
+};
+
+// Set Default Props
+Nav.defaultProps = {
+  info: {
+    imageURL: '',
+    name: '',
+  },
+  imageURL: '',
+  name: '',
+};
+// Set Props
+Nav.propTypes = {
+  imageURL: PropTypes.string,
+  name: PropTypes.string,
 };
 
 export default Nav;

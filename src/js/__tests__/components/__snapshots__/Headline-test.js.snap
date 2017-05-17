@@ -2,10 +2,10 @@
 
 exports[`Component render a button 1`] = `
 <div
-  className="col m5"
+  className="col s12 m6 l4"
 >
   <div
-    className="card"
+    className="card card-panel hoverable"
   >
     <div
       className="card-image"
@@ -23,7 +23,9 @@ exports[`Component render a button 1`] = `
     <div
       className="card-content"
     >
-      <p>
+      <p
+        className="truncate"
+      >
         
       </p>
     </div>
@@ -54,22 +56,68 @@ exports[`Headline Component 1`] = `
   sorts="top"
 >
   <div>
-    <Nav>
+    <Nav
+      imageURL=""
+      info={
+        Object {
+          "imageURL": "",
+          "name": "",
+        }
+      }
+      name=""
+    >
       <div>
+        <ul
+          className="dropdown-content"
+          id="dropdown1"
+        >
+          <li>
+            <img
+              alt="profile"
+              className="pic"
+              src=""
+            />
+          </li>
+          <li
+            className="divider"
+          />
+          <li>
+            <Link
+              onClick={[Function]}
+              onlyActiveOnIndex={false}
+              style={Object {}}
+              to="/logout"
+            >
+              <a
+                onClick={[Function]}
+                style={Object {}}
+              >
+                Logout
+              </a>
+            </Link>
+          </li>
+        </ul>
         <nav>
           <div
             className="nav-wrapper teal lighten-1"
           >
-            <div
+            <a
+              className="brand-logo"
+              href="#!"
+            >
+              E-News
+            </a>
+            <a
               className="button-collapse"
               data-activates="mobile-demo"
+              href="#!"
             >
-              <i
-                className="material-icons"
-              >
-                menu
-              </i>
-            </div>
+              <img
+                alt="profile"
+                className="pic"
+                src=""
+              />
+            </a>
             <ul
               className="right hide-on-med-and-down"
             >
@@ -92,19 +140,17 @@ exports[`Headline Component 1`] = `
                 </IndexLink>
               </li>
               <li>
-                <Link
-                  onClick={[Function]}
-                  onlyActiveOnIndex={false}
-                  style={Object {}}
-                  to="/logout"
+                <a
+                  className="dropdown-button"
+                  data-activates="dropdown1"
+                  href="#!"
                 >
-                  <a
-                    onClick={[Function]}
-                    style={Object {}}
+                  <i
+                    className="material-icons right"
                   >
-                    Logout
-                  </a>
-                </Link>
+                    arrow_drop_down
+                  </i>
+                </a>
               </li>
             </ul>
             <ul
@@ -125,6 +171,9 @@ exports[`Headline Component 1`] = `
                   </a>
                 </Link>
               </li>
+              <li
+                className="divider"
+              />
               <li>
                  
                 <Link
