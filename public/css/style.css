@@ -9,4 +9,10 @@
   max-width: 40px;
   max-height: 40px; }
 
+.height {
+  min-height: 500px !important; }
+
+.art-img {
+  max-height: 250px !important; }
+
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9jc3Mvc3R5bGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

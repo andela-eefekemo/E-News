@@ -6,7 +6,7 @@ const Article = (props) => {
   const { urlToImage, description, title, url } = props;
   return (
 
-    <div className="col s12 m6 l4">
+    <div className="col s12 m6 l6 height">
       <div className="card card-panel hoverable">
         <div className="card-image">
           <img src={urlToImage} alt="Headline" />

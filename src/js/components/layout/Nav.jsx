@@ -61,6 +61,7 @@ Nav.defaultProps = {
 };
 // Set Props
 Nav.propTypes = {
+  info: PropTypes.object,
   imageURL: PropTypes.string,
   name: PropTypes.string,
 };

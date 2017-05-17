@@ -25,7 +25,6 @@ class Headlines extends React.Component {
     this.name = '';
     this.id = '';
     this.change = this.onChange.bind(this);
-    this.userInfo = JSON.parse(localStorage.getItem('User'));
   }
   // componentDidMount - Runs when component is loaded
   componentDidMount() {
@@ -62,7 +61,7 @@ class Headlines extends React.Component {
       .map(article => <Articles key={article.publishedAt} {...article} />);
     return (
       <div>
-        <Nav info={this.userInfo} />
+        <Nav />
         <div className="container" id={this.state.name}>
           <div className="row">
             <div className="col m8">
