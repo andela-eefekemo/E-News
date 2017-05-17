@@ -21,7 +21,7 @@ const Login = () => {
     location.reload();
   };
   const id
-    = '168223437354-g10cfpqph7vkimb410tdm4kdofvf6028.apps.googleusercontent.com';
+    = process.env.ID;
   /**
    * @function responseFailure
    * @param {Object} response -Response object
@@ -32,7 +32,7 @@ const Login = () => {
   };
   return (
     <div className="slider fullscreen valign-wrapper">
-      <ul class="slides">
+      <ul className="slides">
         <li>
           <img src="public/img/home.jpg" />
           <div className="caption center-align">

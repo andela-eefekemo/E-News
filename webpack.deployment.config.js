@@ -1,3 +1,4 @@
+require('dotenv').config();
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -32,6 +33,10 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({ filename: './public/css/style.css', allChunks: true }),
+    new webpack.DefinePlugin({
+      'process.env.KEY': JSON.stringify(process.env.KEY),
+      'process.env.ID': JSON.stringify(process.env.ID),
+    }),
   ],
   watch: true,
 };
