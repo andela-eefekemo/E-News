@@ -30,16 +30,18 @@ When the app has started:
 * Use the `Sort Field` to views news based on the sort by available.
 
 ### Technology stack
-* Node JS
-* ES6
-* React
-* Webpack
-* Babel
-* Express
-* Jest
+*  **[Node JS](https://nodejs.org/en/)** - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. 
+* **[React](https://facebook.github.io/react/)** - React is a JavaScript library for building user interfaces.
+* **[Webpack](https://webpack.github.io/)** - webpack is a module bundler for modern JavaScript applications.
+* **[Babel](https://babeljs.io/)** - Babel is a JavaScript compiler, it is used for transpiling ES6 down to ES5.
+* **[Express](https://expressjs.com/)** - Express is a minimal and flexible Node.js web application framework, It is used as the web server.
+* **[Jest](https://facebook.github.io/jest/)** - Complete and easy to set-up JavaScript testing solution. Works out of the box for any React project.
+* **[Axios](https://github.com/mzabriskie/axios)** -A Promise based HTTP client for the browser and node.js. Used in making the Api Call.
 
-<!--### Limitations of the project
--->
+### Limitations of the project
+* The Application uses only Google Login as a form of Authentication
+* The Application does not display stories on the site
+* The Application can not save favorite articles for later viewing
 
 ### Contributing to the project
 * Fork this repositry to your account
