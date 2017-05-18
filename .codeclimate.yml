@@ -13,12 +13,13 @@ ratings:
 paths:
     - "src/js"
 exclude_paths:
-- "src/public
+- "public"
 - .gitignore
 - .eslintignore
 - .travis.yml
 - .eslintrc.json
-- "src/__tests__/components/__snapshots__"
+- "src/js/__tests__"
+- "src/js/__mocks__"
 - "webpack.config.js"
 - "webpack.deployment.config.js"
 - "server.js"
