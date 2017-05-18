@@ -1,7 +1,8 @@
-/* global location localStorage*/
+/* global location localStorage document $*/
 import React from 'react';
 import { IndexLink, Link } from 'react-router';
 import PropTypes from 'prop-types';
+import $ from 'jquery';
 // Nav Component
 const Nav = (props) => {
   /**
@@ -13,16 +14,14 @@ const Nav = (props) => {
     localStorage.removeItem('User');
     location.reload();
   };
+  $(document).ready(() => {
+    $('.dropdown-button').dropdown();
+  });
+
   const img = props.info.imageURL;
   const name = props.info.name;
   return (
     <div>
-      <ul id="dropdown1" className="dropdown-content">
-        <li><img className="pic" src={img} alt="profile" />
-        </li>
-        <li className="divider" />
-        <li ><Link to="/logout" onClick={logout}>Logout</Link></li>
-      </ul>
       <nav>
         <div className="nav-wrapper teal lighten-1">
           <a href="#!" className="brand-logo">E-News</a>
@@ -32,12 +31,18 @@ const Nav = (props) => {
           <ul className="right hide-on-med-and-down">
             <li><IndexLink to="/">Home</IndexLink></li>
 
-            <li><a className="dropdown-button" href="#!" data-activates="dropdown1">
+            <li><a className="dropdown-button" href="#" data-activates="dropdown1">
               {name}<i className="material-icons right">
                 arrow_drop_down
                 </i>
             </a>
             </li>
+            <ul id="dropdown1" className="dropdown-content">
+              <li><img className="pic" src={img} alt="profile" />
+              </li>
+              <li className="divider" />
+              <li ><Link to="/logout" onClick={logout}>Logout</Link></li>
+            </ul>
           </ul>
           <ul className="side-nav" id="mobile-demo">
             <li><Link to="/">Home</Link></li>

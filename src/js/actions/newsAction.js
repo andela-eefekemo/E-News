@@ -1,3 +1,4 @@
+/* global window */
 import Dispatcher from '../dispatcher';
 import newsApi from '../utils/newsApi';
 import * as constants from '../constants/constants';
@@ -25,7 +26,7 @@ export const getSource = () => {
  */
 export const getArticle = (source, sortBy) => {
   const api = 'https://newsapi.org/v1/articles?source=';
-  const key = process.env.KEY;
+  const key = '213327409d384371851777e7c7f78dfe';
   const link = `${api}${source}&sortBy=${sortBy}&apiKey=${key}`;
   newsApi.get(link).then((article) => {
     const data = article.articles;

@@ -1,4 +1,4 @@
-/* global location localStorage*/
+/* global location localStorage window*/
 import React from 'react';
 import GoogleLogin from 'react-google-login';
 
@@ -21,7 +21,7 @@ const Login = () => {
     location.reload();
   };
   const id
-    = process.env.ID;
+    = process.env.ID || window.env.ID;
   /**
    * @function responseFailure
    * @param {Object} response -Response object

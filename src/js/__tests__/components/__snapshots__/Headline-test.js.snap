@@ -243,36 +243,6 @@ exports[`Headline Component 1`] = `
       name=""
     >
       <div>
-        <ul
-          className="dropdown-content"
-          id="dropdown1"
-        >
-          <li>
-            <img
-              alt="profile"
-              className="pic"
-              src=""
-            />
-          </li>
-          <li
-            className="divider"
-          />
-          <li>
-            <Link
-              onClick={[Function]}
-              onlyActiveOnIndex={false}
-              style={Object {}}
-              to="/logout"
-            >
-              <a
-                onClick={[Function]}
-                style={Object {}}
-              >
-                Logout
-              </a>
-            </Link>
-          </li>
-        </ul>
         <nav>
           <div
             className="nav-wrapper teal lighten-1"
@@ -319,7 +289,7 @@ exports[`Headline Component 1`] = `
                 <a
                   className="dropdown-button"
                   data-activates="dropdown1"
-                  href="#!"
+                  href="#"
                 >
                   <i
                     className="material-icons right"
@@ -328,6 +298,36 @@ exports[`Headline Component 1`] = `
                   </i>
                 </a>
               </li>
+              <ul
+                className="dropdown-content"
+                id="dropdown1"
+              >
+                <li>
+                  <img
+                    alt="profile"
+                    className="pic"
+                    src=""
+                  />
+                </li>
+                <li
+                  className="divider"
+                />
+                <li>
+                  <Link
+                    onClick={[Function]}
+                    onlyActiveOnIndex={false}
+                    style={Object {}}
+                    to="/logout"
+                  >
+                    <a
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      Logout
+                    </a>
+                  </Link>
+                </li>
+              </ul>
             </ul>
             <ul
               className="side-nav"
