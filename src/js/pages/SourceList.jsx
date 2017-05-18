@@ -1,35 +1,35 @@
 import React from 'react';
 
-import NewsStore from '../stores/newsStore';
+import sourcesStore from '../stores/sourcesStore';
 import * as NewsActions from '../actions/newsAction';
 import Sources from '../components/Sources.jsx';
 
 /**
  * Home React Component
  */
-export default class Home extends React.Component {
+export default class SourceList extends React.Component {
   constructor() {
     super();
     this.state = {
-      sources: NewsStore.getSources(),
+      sources: [],
       name: 'sources',
     };
-    this.sources = this.getNews.bind(this);
+    this.sources = this.getSources.bind(this);
     this.filter = this.filterSources.bind(this);
   }
   // componentDidMount - Runs when component is loaded
   componentDidMount() {
-    NewsActions.getSource();
-    NewsStore.on('changes', this.sources);
+    NewsActions.getSources();
+    sourcesStore.on('changes', this.sources);
   }
   // componentWillMount - Runs when component is loaded
   componentWillUnmount() {
-    NewsStore.removeListener('changes', this.sources);
+    sourcesStore.removeListener('changes', this.sources);
   }
-  // getArticle - Sets state of sources
-  getNews() {
+  // getSources - Sets state of sources
+  getSources() {
     this.setState({
-      sources: NewsStore.getSources(),
+      sources: sourcesStore.getSources(),
     });
   }
   /**
@@ -39,7 +39,7 @@ export default class Home extends React.Component {
    */
   filterSources(event) {
     const searchList = [];
-    NewsStore.getSources().map((source) => {
+    sourcesStore.getSources().map((source) => {
       if (source.name.toLowerCase()
         .search(event.target.value.toLowerCase()) !== -1) {
         searchList.push(source);
@@ -52,7 +52,7 @@ export default class Home extends React.Component {
 
   render() {
     const { sources } = this.state;
-    const NewsComponents = sources.map(source => <Sources key={source.id} {...source} />);
+    const SourcesComponents = sources.map(source => <Sources key={source.id} {...source} />);
     return (
       <div className="container">
         <div className="row">
@@ -67,7 +67,7 @@ export default class Home extends React.Component {
         </div>
         <div className="row">
           <div>
-            {NewsComponents}
+            {SourcesComponents}
           </div>
         </div>
       </div>

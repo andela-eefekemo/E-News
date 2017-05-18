@@ -7,7 +7,7 @@ import * as constants from '../constants/constants';
  * @param {string} category sortsBy category for string
  * @return {void}
  */
-export const getSource = () => {
+export const getSources = () => {
   const link = 'https://newsapi.org/v1/sources';
   newsApi.get(link).then((source) => {
     const data = source.sources;
@@ -24,7 +24,7 @@ export const getSource = () => {
  * @param {string} sortBy SortBy for article
  * @return {void}
  */
-export const getArticle = (source, sortBy) => {
+export const getArticles = (source, sortBy) => {
   const api = 'https://newsapi.org/v1/articles?source=';
   const key = process.env.KEY;
   const link = `${api}${source}&sortBy=${sortBy}&apiKey=${key}`;

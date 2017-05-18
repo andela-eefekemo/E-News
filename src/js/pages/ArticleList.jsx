@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Nav from '../components/layout/Nav.jsx';
 import Footer from '../components/layout/Footer.jsx';
-import NewsStore from '../stores/newsStore';
+import articlesStore from '../stores/articlesStore';
 import * as NewsActions from '../actions/newsAction';
 import Dropdown from '../components/Dropdown.jsx';
 import Articles from '../components/Articles.jsx';
@@ -12,12 +12,11 @@ import Articles from '../components/Articles.jsx';
 /**
  * Headlines React Component
  */
-class Headlines extends React.Component {
+class ArticleList extends React.Component {
   constructor(props) {
     super(props);
-    this.api = NewsStore.getArticles();
     this.state = {
-      articles: this.api,
+      articles: [],
       name: 'articles',
     };
     this.article = this.getArticle.bind(this);
@@ -34,22 +33,22 @@ class Headlines extends React.Component {
     this.sortsBy = this.sorts.map(sort => sort);
     this.name = query.name;
     this.id = query.id;
-    NewsStore.on('changes', this.article);
-    NewsActions.getArticle(query.id, this.sorts[0]);
+    articlesStore.on('changes', this.article);
+    NewsActions.getArticles(query.id, this.sorts[0]);
   }
   // componentWillUnMount - Runs when component is unloaded(changed)
   componentWillUnmount() {
-    NewsStore.removeListener('changes', this.article);
+    articlesStore.removeListener('changes', this.article);
   }
   // onChange - Runs when onChange event is called in select field
   onChange(event) {
     const value = event.target.value;
-    NewsActions.getArticle(this.id, value);
+    NewsActions.getArticles(this.id, value);
   }
   // getArticle - Sets state of article
   getArticle() {
     this.setState({
-      articles: NewsStore.getArticles(),
+      articles: articlesStore.getArticles(),
     });
   }
   render() {
@@ -92,7 +91,7 @@ class Headlines extends React.Component {
   }
 }
 // sets default propstype
-Headlines.defaultProps = {
+ArticleList.defaultProps = {
   location: {
     query: {
       sorts: 'top',
@@ -100,8 +99,8 @@ Headlines.defaultProps = {
   },
 };
 
-Headlines.propTypes = {
+ArticleList.propTypes = {
   location: PropTypes.object,
 };
 
-export default Headlines;
+export default ArticleList;

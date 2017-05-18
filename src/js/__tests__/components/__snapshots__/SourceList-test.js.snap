@@ -16,13 +16,13 @@ exports[`Component render a button 1`] = `
     className="btn btn-default"
     onClick={[Function]}
   >
-    More Info
+    View Headlines
   </button>
 </div>
 `;
 
 exports[`Home Component 1`] = `
-<Home>
+<SourceList>
   <div
     className="container"
   >
@@ -47,5 +47,5 @@ exports[`Home Component 1`] = `
       <div />
     </div>
   </div>
-</Home>
+</SourceList>
 `;

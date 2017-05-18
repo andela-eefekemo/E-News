@@ -3,11 +3,11 @@ import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import renderer from 'react-test-renderer'
 
-import Headline from '../../pages/Headline';
+import ArticleList from '../../pages/ArticleList';
 import Articles from '../../components/Articles.jsx';
 
 test('Headline Component', () => {
-  const component = toJson(mount(<Headline sorts="top"/>));
+  const component = toJson(mount(<ArticleList sorts="top"/>));
   expect(component).toMatchSnapshot();
 });
 

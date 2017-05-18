@@ -221,7 +221,7 @@ exports[`Component render a button 1`] = `
 `;
 
 exports[`Headline Component 1`] = `
-<Headlines
+<ArticleList
   location={
     Object {
       "query": Object {
@@ -248,7 +248,7 @@ exports[`Headline Component 1`] = `
             className="nav-wrapper teal lighten-1"
           >
             <a
-              className="brand-logo"
+              className="brand-logo logo"
               href="#!"
             >
               E-News
@@ -379,17 +379,36 @@ exports[`Headline Component 1`] = `
         className="row"
       >
         <div
-          className="col m8"
+          className="col m6"
         >
           <h1 />
         </div>
         <div
-          className="col m4"
+          className="col m6"
         >
-          <select
-            className="browser-default input-field"
-            onChange={[Function]}
-          />
+          <div
+            className="row"
+          >
+            <div
+              className="col m4"
+            >
+              <h6
+                className="sortBy"
+                htmlFor="sortsBy"
+              >
+                Sort By
+              </h6>
+            </div>
+            <div
+              className="col m8"
+            >
+              <select
+                className="browser-default input-field select"
+                id="sortsBy"
+                onChange={[Function]}
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -413,5 +432,5 @@ exports[`Headline Component 1`] = `
       </div>
     </Footer>
   </div>
-</Headlines>
+</ArticleList>
 `;

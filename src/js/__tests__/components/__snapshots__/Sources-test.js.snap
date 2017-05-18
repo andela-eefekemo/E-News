@@ -18,7 +18,7 @@ exports[`Sources Component 1`] = `
       className="btn btn-default"
       onClick={[Function]}
     >
-      More Info
+      View Headlines
     </button>
   </div>
 </Sources>

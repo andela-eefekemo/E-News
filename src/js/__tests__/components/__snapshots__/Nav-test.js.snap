@@ -17,7 +17,7 @@ exports[`Navbar component 1`] = `
         className="nav-wrapper teal lighten-1"
       >
         <a
-          className="brand-logo"
+          className="brand-logo logo"
           href="#!"
         >
           E-News
