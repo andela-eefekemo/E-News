@@ -1,3 +1,4 @@
+[![Code Climate](https://codeclimate.com/github/andela-eefekemo/E-News/badges/gpa.svg)](https://codeclimate.com/github/andela-efeekemo/E-News)
 [![Build Status](https://travis-ci.org/andela-eefekemo/E-News.svg?branch=master)](https://travis-ci.org/andela-eefekemo/E-News)
 [![Coverage Status](https://coveralls.io/repos/github/andela-eefekemo/E-News/badge.png?branch=master)](https://coveralls.io/github/andela-eefekemo/E-News?branch=master)
 # E-News
