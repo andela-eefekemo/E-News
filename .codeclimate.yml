@@ -10,8 +10,8 @@ engines:
       languages:
         JavaScript: true
 ratings:
-paths:
-    - "src/js"
+  paths:
+      - "src/js"
 exclude_paths:
 - "public"
 - .gitignore

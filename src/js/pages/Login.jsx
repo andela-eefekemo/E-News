@@ -21,7 +21,7 @@ const Login = () => {
     location.reload();
   };
   const id
-    = process.env.ID || window.env.ID;
+    = process.env.ID;
   /**
    * @function responseFailure
    * @param {Object} response -Response object
@@ -49,8 +49,8 @@ const Login = () => {
               <span
                 className="btn waves-effect waves-light"
                 name="action">
-                Login with Here
-                <i className="material-icons right">send</i>
+                <i className="fa fa-google google"></i>
+                Sign in with google
               </span>
             </GoogleLogin>
           </div>

@@ -18,7 +18,7 @@ class Sources extends React.Component {
         <button
           className="btn btn-default"
           onClick={this.handleQueryValue.bind(this, link)} >
-          More Info
+          View Headlines
         </button>
       </div>
     );

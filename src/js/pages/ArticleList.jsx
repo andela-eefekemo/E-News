@@ -64,15 +64,22 @@ class Headlines extends React.Component {
         <Nav />
         <div className="container" id={this.state.name}>
           <div className="row">
-            <div className="col m8">
+            <div className="col m6">
               <h1>{this.name}</h1>
             </div>
-            <div className="col m4">
-              <select
-                className="browser-default input-field"
-                onChange={this.change}>
-                {sorted}
-              </select>
+            <div className="col m6">
+              <div className="row">
+                <div className="col m4">
+                  <h6 htmlFor="sortsBy" className="sortBy">Sort By</h6>
+                </div>
+                <div className="col m8">
+                  <select
+                    className="browser-default input-field select"
+                    onChange={this.change} id="sortsBy">
+                    {sorted}
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
           <div className="row">

@@ -15,4 +15,18 @@
 .art-img {
   max-height: 250px !important; }
 
+.google {
+  padding-right: 10px; }
+
+.logo {
+  padding-left: 20px !important; }
+
+.select {
+  margin-top: 50px !important; }
+
+.sortBy {
+  margin-top: 60px !important;
+  margin-left: 50px !important;
+  font-size: 18px; }
+
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3B1YmxpYy9jc3Mvc3R5bGUuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

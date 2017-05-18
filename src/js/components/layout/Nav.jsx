@@ -24,7 +24,7 @@ const Nav = (props) => {
     <div>
       <nav>
         <div className="nav-wrapper teal lighten-1">
-          <a href="#!" className="brand-logo">E-News</a>
+          <a href="#!" className="brand-logo logo">E-News</a>
           <a href="#!" data-activates="mobile-demo" className="button-collapse">
             <img className="pic" src={img} alt="profile" />
           </a>

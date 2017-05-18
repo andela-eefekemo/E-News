@@ -1,7 +1,7 @@
 /* global localStorage*/
 import React from 'react';
 
-import Home from './Home.jsx';
+import SourceList from './SourceList.jsx';
 import Nav from '../components/layout/Nav.jsx';
 import Footer from '../components/layout/Footer.jsx';
 
@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <div>
       <Nav info={userInfo} />
-      <Home />
+      <SourceList />
       <Footer />
     </div>
   );
