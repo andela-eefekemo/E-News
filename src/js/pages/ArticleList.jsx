@@ -10,7 +10,7 @@ import Dropdown from '../components/Dropdown.jsx';
 import Articles from '../components/Articles.jsx';
 
 /**
- * Headlines React Component
+ * Class representing ArticleList React Component
  */
 class ArticleList extends React.Component {
   constructor(props) {
@@ -25,7 +25,13 @@ class ArticleList extends React.Component {
     this.id = '';
     this.change = this.onChange.bind(this);
   }
-  // componentDidMount - Runs when component is loaded
+  /**
+   * @method componentDidMount - Runs after the page has been rendered
+   * @return {void}
+   * Retrieves query values from the props and assigns them to instance variables
+   * Makes an action call to get list of sources from the Api
+   * Listens for a change event from the sourcesStore
+   */
   componentDidMount() {
     const { location } = this.props;
     const { query } = location;
@@ -33,19 +39,30 @@ class ArticleList extends React.Component {
     this.sortsBy = this.sorts.map(sort => sort);
     this.name = query.name;
     this.id = query.id;
-    articlesStore.on('changes', this.article);
     NewsActions.getArticles(query.id, this.sorts[0]);
+    articlesStore.on('changes', this.article);
   }
-  // componentWillUnMount - Runs when component is unloaded(changed)
+  /**
+   * @method componentWillUnmount - Runs after component has been closed
+   * @return {void}
+   * Removes changes Listener from the articlesStore
+   */
   componentWillUnmount() {
     articlesStore.removeListener('changes', this.article);
   }
-  // onChange - Runs when onChange event is called in select field
+  /**
+   * @method onChange - Listens for an event and makes an action call to the Api
+   * @param {event} event -Takes in an event parameter
+   * @return {void}
+   */
   onChange(event) {
     const value = event.target.value;
     NewsActions.getArticles(this.id, value);
   }
-  // getArticle - Sets state of article
+  /**
+   * @method getArticle - Sets the state of articles to data retrieve from articlesStore
+   * @return {void}
+   */
   getArticle() {
     this.setState({
       articles: articlesStore.getArticles(),
@@ -90,7 +107,7 @@ class ArticleList extends React.Component {
     );
   }
 }
-// sets default propstype
+
 ArticleList.defaultProps = {
   location: {
     query: {

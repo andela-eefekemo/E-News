@@ -8,8 +8,8 @@ import axios from 'axios';
  */
 const get = {
   get: link => axios.get(link)
-      .then(response => response.data)
-      .catch(error => error),
+    .then(response => response.data)
+    .catch(error => error),
 };
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import renderer from 'react-test-renderer';
 
@@ -18,19 +18,10 @@ test('Home Component', () => {
   expect(component.find('#bar').length).toBe(1);
 });
 
-test('Component render a button', () => {
-  const source = {
-    id: 'BBC',
-    name: 'BBC News',
-    description: 'BBC world news',
-  };
-  const onClick = jest.fn();
-  const component = renderer.create(
-    <Sources
-      key={source.id} name={source.name} title={source.description}
-      id={source.id} fetchAvailableSort={onClick}
-    />,
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+
+test('Testing Props', () => {
+  // const wrapper = mount(<SourceList />);
+  // expect(wrapper.state('sources')).toEqual([]);
+  // wrapper.setState({ sources: 'the-next-web' });
+  // expect(wrapper.state('sources')).toEqual('the-next-web');
 });

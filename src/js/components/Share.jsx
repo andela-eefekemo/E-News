@@ -54,12 +54,12 @@ const Share = (props) => {
     </div>
   );
 };
-// Set Default Props
+
 Share.defaultProps = {
   share: '',
   title: '',
 };
-// Set Props
+
 Share.propTypes = {
   share: PropTypes.string,
   title: PropTypes.string,

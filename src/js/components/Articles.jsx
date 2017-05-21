@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Share from './Share.jsx';
 
-// Article Component
+
 const Article = (props) => {
   const { urlToImage, description, title, url } = props;
   return (

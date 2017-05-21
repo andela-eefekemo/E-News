@@ -1,19 +1,19 @@
 import dispatcher from '../../dispatcher';
 import mock_api from '../../__mocks__/mock-api.json';
 import sourcesStore from '../../stores/sourcesStore';
+import constants from '../../constants/constants';
 
 jest.mock('../../dispatcher');
 describe('sourcesStore', () => {
   let sourcesStore;
   let callback;
-  
-  const sources= {
+
+  const sources = {
     type: 'GET_SOURCES',
-    mock_api,
+    sources: mock_api
   }
-  
+
   beforeEach(() => {
-    jest.resetModules();
     sourcesStore = require('../../stores/sourcesStore').default;
     callback = dispatcher.register.mock.calls[0][0];
   });
@@ -23,13 +23,12 @@ describe('sourcesStore', () => {
   });
 
   it('should initialize with no article', () => {
-    expect(sourcesStore.sources.length).toBe(0);
+    expect(sourcesStore.getSources().length).toBe(0);
   });
 
   it('stores mock', () => {
     callback(sources);
-    expect(sourcesStore.sources).toEqual([]);
+    expect(sourcesStore.getSources().length).toBe(10)
+    expect(sourcesStore.getSources()).toEqual(mock_api);
   });
- 
-
 });

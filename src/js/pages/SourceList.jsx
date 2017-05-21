@@ -17,25 +17,39 @@ export default class SourceList extends React.Component {
     this.sources = this.getSources.bind(this);
     this.filter = this.filterSources.bind(this);
   }
-  // componentDidMount - Runs when component is loaded
+  /**
+   * @method componentDidMount - Runs after the page has been rendered
+   * @return {void}
+   * Makes an action call to get list of sources from the Api
+   * Listens for a change event from the sourcesStore
+   */
   componentDidMount() {
     NewsActions.getSources();
     sourcesStore.on('changes', this.sources);
   }
-  // componentWillMount - Runs when component is loaded
+  /**
+   * @method componentWillUnmount - Runs after component has been closed
+   * @return {void}
+   * Removes changes Listener from the sourcesStore
+   */
   componentWillUnmount() {
     sourcesStore.removeListener('changes', this.sources);
   }
-  // getSources - Sets state of sources
+  /**
+   * @method getSources - Sets the state of Sources to data retrieve from sourcesStore
+   * @return {void}
+   */
   getSources() {
     this.setState({
       sources: sourcesStore.getSources(),
     });
   }
   /**
-   * filterSources - Searches through available sources
+   * @method filterSources - Searches through available sources
    * @param {event} event - Takes in an onChange event
-   * Sets the state of sources to the result
+   * @return {void}
+   * Maps through lists of articles retrieved from the sourcesStore
+   * Sets the sources State to the search result
    */
   filterSources(event) {
     const searchList = [];
@@ -52,6 +66,7 @@ export default class SourceList extends React.Component {
 
   render() {
     const { sources } = this.state;
+    // maps through sources array and passes props to Sources component
     const SourcesComponents = sources.map(source => <Sources key={source.id} {...source} />);
     return (
       <div className="container">

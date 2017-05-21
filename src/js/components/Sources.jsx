@@ -17,7 +17,7 @@ class Sources extends React.Component {
         <p className="truncate">{description}</p>
         <button
           className="btn btn-default"
-          onClick={this.handleQueryValue.bind(this, link)} >
+          onClick={this.handleQueryValue.bind(this, link)}>
           View Headlines
         </button>
       </div>

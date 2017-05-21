@@ -7,11 +7,12 @@ class SourcesStore extends EventEmitter {
   constructor() {
     super();
     this.sources = [];
+    this.getSources = this.getSources.bind(this);
   }
 
   /**
  * @method getSources
- * returns articles array of NewsStore
+ * @return {array} returns an array of  sources
  */
   getSources() {
     return this.sources;
@@ -26,7 +27,7 @@ class SourcesStore extends EventEmitter {
   updateSources(action) {
     switch (action.type) {
       case constants.Sources:
-        this.sources = action.data;
+        this.sources = action.sources;
         this.emit('changes');
         break;
       default:
@@ -35,7 +36,7 @@ class SourcesStore extends EventEmitter {
   }
 }
 
-// Creates an subclass of NewsStore
+// Creates an instance of SourcesStore
 const sourcesStore = new SourcesStore();
 // Registers the store to recieve actions from the dispatcher
 Dispatcher.register(sourcesStore.updateSources.bind(sourcesStore));

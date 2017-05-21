@@ -2,11 +2,11 @@
 import React from 'react';
 import GoogleLogin from 'react-google-login';
 
-// Login Component
+
 const Login = () => {
   /**
    * @function responseSuccess
-   * @param {Object} googleUser -Response object
+   * @param {Object} googleUser - Response object
    * Saves user profile to localStorage
    * reloads the page
    */
@@ -20,8 +20,7 @@ const Login = () => {
     }));
     location.reload();
   };
-  const id
-    = process.env.ID;
+  const id = process.env.ID;
   /**
    * @function responseFailure
    * @param {Object} response -Response object
@@ -34,7 +33,7 @@ const Login = () => {
     <div className="slider fullscreen valign-wrapper">
       <ul className="slides">
         <li>
-          <img src="public/img/home.jpg" />
+          <img src="public/img/home.jpg" alt="home" />
           <div className="caption center-align">
             <h3 className="light black-text text-lighten-3">E-News</h3>
             <h5 className="light black-text text-lighten-3">View Headlines as it happens</h5>
@@ -49,7 +48,7 @@ const Login = () => {
               <span
                 className="btn waves-effect waves-light"
                 name="action">
-                <i className="fa fa-google google"></i>
+                <i className="fa fa-google google" />
                 Sign in with google
               </span>
             </GoogleLogin>
