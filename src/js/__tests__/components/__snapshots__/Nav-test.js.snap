@@ -1,22 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Navbar component 1`] = `
-<Nav>
+<Nav
+  imageURL=""
+  info={
+    Object {
+      "imageURL": "",
+      "name": "",
+    }
+  }
+  name=""
+>
   <div>
     <nav>
       <div
         className="nav-wrapper teal lighten-1"
       >
-        <div
+        <a
+          className="brand-logo logo"
+          href="#!"
+        >
+          E-News
+        </a>
+        <a
           className="button-collapse"
           data-activates="mobile-demo"
+          href="#!"
         >
-          <i
-            className="material-icons"
-          >
-            menu
-          </i>
-        </div>
+          <img
+            alt="profile"
+            className="pic"
+            src=""
+          />
+        </a>
         <ul
           className="right hide-on-med-and-down"
         >
@@ -39,20 +55,48 @@ exports[`Navbar component 1`] = `
             </IndexLink>
           </li>
           <li>
-            <Link
-              onClick={[Function]}
-              onlyActiveOnIndex={false}
-              style={Object {}}
-              to="/logout"
+            <a
+              className="dropdown-button"
+              data-activates="dropdown1"
+              href="#"
             >
-              <a
-                onClick={[Function]}
-                style={Object {}}
+              <i
+                className="material-icons right"
               >
-                Logout
-              </a>
-            </Link>
+                arrow_drop_down
+              </i>
+            </a>
           </li>
+          <ul
+            className="dropdown-content"
+            id="dropdown1"
+          >
+            <li>
+              <img
+                alt="profile"
+                className="pic"
+                src=""
+              />
+            </li>
+            <li
+              className="divider"
+            />
+            <li>
+              <Link
+                onClick={[Function]}
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                to="/logout"
+              >
+                <a
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  Logout
+                </a>
+              </Link>
+            </li>
+          </ul>
         </ul>
         <ul
           className="side-nav"
@@ -72,6 +116,9 @@ exports[`Navbar component 1`] = `
               </a>
             </Link>
           </li>
+          <li
+            className="divider"
+          />
           <li>
              
             <Link

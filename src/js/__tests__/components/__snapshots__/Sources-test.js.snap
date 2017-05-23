@@ -8,15 +8,17 @@ exports[`Sources Component 1`] = `
   sortBysAvailable={Array []}
 >
   <div
-    className="col m4"
+    className="col s12 m6 l4 "
   >
     <h5 />
-    <p />
+    <p
+      className="truncate"
+    />
     <button
       className="btn btn-default"
       onClick={[Function]}
     >
-      More Info
+      View Headlines
     </button>
   </div>
 </Sources>

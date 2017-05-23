@@ -1,4 +1,6 @@
+require('dotenv').config();
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'inline-sourcemap',
@@ -19,8 +21,27 @@ module.exports = {
           plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
         },
       },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          // resolve-url-loader may be chained before sass-loader if necessary
+          use: ['css-loader', 'sass-loader'],
+        }),
+      },
     ],
   },
+  plugins: [
+    new ExtractTextPlugin({ filename: './public/css/style.css', allChunks: true }),
+    new webpack.DefinePlugin({
+      'process': {
+        'env': {
+          'KEY': JSON.stringify(process.env.KEY),
+          'ID': JSON.stringify(process.env.ID),
+        },
+      },
+    }),
+  ],
   watch: true,
 };
 

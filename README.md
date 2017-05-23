@@ -1,5 +1,6 @@
+[![Code Climate](https://codeclimate.com/github/andela-eefekemo/E-News/badges/gpa.svg)](https://codeclimate.com/github/andela-efeekemo/E-News)
 [![Build Status](https://travis-ci.org/andela-eefekemo/E-News.svg?branch=master)](https://travis-ci.org/andela-eefekemo/E-News)
-[![Coverage Status](https://coveralls.io/repos/github/andela-eefekemo/E-News/badge.svg?branch=master)](https://coveralls.io/github/andela-eefekemo/E-News?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/andela-eefekemo/E-News/badge.png?branch=master)](https://coveralls.io/github/andela-eefekemo/E-News?branch=master)
 # E-News
 ## Introduction
 E-News is a News Feed Application that makes use of an API to display various News Sources with their corresponding Headlines based on the various options(top, latest e.t.c). The link to the hosted app [E-News](https://e--news.herokuapp.com)
@@ -29,16 +30,18 @@ When the app has started:
 * Use the `Sort Field` to views news based on the sort by available.
 
 ### Technology stack
-* Node JS
-* ES6
-* React
-* Webpack
-* Babel
-* Express
-* Jest
+*  **[Node JS](https://nodejs.org/en/)** - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. 
+* **[React](https://facebook.github.io/react/)** - React is a JavaScript library for building user interfaces.
+* **[Webpack](https://webpack.github.io/)** - webpack is a module bundler for modern JavaScript applications.
+* **[Babel](https://babeljs.io/)** - Babel is a JavaScript compiler, it is used for transpiling ES6 down to ES5.
+* **[Express](https://expressjs.com/)** - Express is a minimal and flexible Node.js web application framework, It is used as the web server.
+* **[Jest](https://facebook.github.io/jest/)** - Complete and easy to set-up JavaScript testing solution. Works out of the box for any React project.
+* **[Axios](https://github.com/mzabriskie/axios)** -A Promise based HTTP client for the browser and node.js. Used in making the Api Call.
 
-<!--### Limitations of the project
--->
+### Limitations of the project
+* The Application uses only Google Login as a form of Authentication
+* The Application does not display stories on the site
+* The Application can not save favorite articles for later viewing
 
 ### Contributing to the project
 * Fork this repositry to your account
