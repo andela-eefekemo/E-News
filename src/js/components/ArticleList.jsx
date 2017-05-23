@@ -2,12 +2,12 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import Nav from '../components/layout/Nav.jsx';
-import Footer from '../components/layout/Footer.jsx';
+import Nav from './layout/Nav.jsx';
+import Footer from './layout/Footer.jsx';
 import articlesStore from '../stores/articlesStore';
 import * as NewsActions from '../actions/newsAction';
-import Dropdown from '../components/Dropdown.jsx';
-import Articles from '../components/Articles.jsx';
+import Dropdown from './Dropdown.jsx';
+import Articles from './Articles.jsx';
 
 /**
  * Class representing ArticleList React Component
@@ -72,11 +72,13 @@ class ArticleList extends React.Component {
   }
   render() {
     // maps through sortsBy array and passes props to dropdown component
-    const sorted = this.sortsBy
-      .map((sort, index) => <Dropdown key={index} value={sort} text={sort} />);
+    const sorted = this.sortsBy.map((sort, index) => (
+      <Dropdown key={index} value={sort} text={sort} />
+    ));
     // maps through articles array and passes props to Articles component
-    const singleArticles = this.state.articles
-      .map(article => <Articles key={article.publishedAt} {...article} />);
+    const singleArticles = this.state.articles.map(article => (
+      <Articles key={article.publishedAt} {...article} />
+    ));
     return (
       <div>
         <Nav />
@@ -93,7 +95,9 @@ class ArticleList extends React.Component {
                 <div className="col m8">
                   <select
                     className="browser-default input-field select"
-                    onChange={this.change} id="sortsBy">
+                    onChange={this.change}
+                    id="sortsBy"
+                  >
                     {sorted}
                   </select>
                 </div>

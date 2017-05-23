@@ -1,3 +1,4 @@
+/* global expect jest test */
 import newsApi from '../../utils/newsApi';
 
 test('Returns List of Articles from Api', () => {

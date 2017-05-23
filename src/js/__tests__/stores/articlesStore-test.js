@@ -1,21 +1,18 @@
+/* global expect jest describe it beforeEach */
 import dispatcher from '../../dispatcher';
-import mock_api from '../../__mocks__/mock-api.json';
+import mockApi from '../../__mocks__/mockApi.json';
 import articlesStore from '../../stores/articlesStore';
-import constants from '../../constants/constants';
 
 jest.mock('../../dispatcher');
 describe('articlesStore', () => {
-  let articlesStore;
   let callback;
 
   const articles = {
     type: 'GET_ARTICLES',
-    articles: mock_api,
+    articles: mockApi,
   };
 
-
   beforeEach(() => {
-    articlesStore = require('../../stores/articlesStore').default;
     callback = dispatcher.register.mock.calls[0][0];
   });
 
@@ -30,7 +27,6 @@ describe('articlesStore', () => {
   it('stores mock', () => {
     callback(articles);
     expect(articlesStore.getArticles().length).toBe(10);
-    expect(articlesStore.getArticles()).toEqual(mock_api);
+    expect(articlesStore.getArticles()).toEqual(mockApi);
   });
-
 });

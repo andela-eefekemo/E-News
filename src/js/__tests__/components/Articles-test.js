@@ -1,9 +1,9 @@
+/* global expect jest test */
 import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 import Article from '../../components/Articles';
-
 
 test('Article Component', () => {
   const component = mount(<Article />);
@@ -19,9 +19,9 @@ test('Testing Props', () => {
 });
 
 test('Testing props in proper position', () => {
-  const wrapper = mount(<Article title="Eguono" description="my name" />)
+  const wrapper = mount(<Article title="Eguono" description="my name" />);
   const span = wrapper.find('span');
   const p = wrapper.find('p');
   expect(span.text()).toBe('Eguono');
-  expect(p.text()).toBe("my name")
+  expect(p.text()).toBe('my name');
 });

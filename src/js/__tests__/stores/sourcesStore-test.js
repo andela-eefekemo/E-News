@@ -1,20 +1,18 @@
+/* global expect jest describe it beforeEach */
 import dispatcher from '../../dispatcher';
-import mock_api from '../../__mocks__/mock-api.json';
+import mockApi from '../../__mocks__/mockApi.json';
 import sourcesStore from '../../stores/sourcesStore';
-import constants from '../../constants/constants';
 
 jest.mock('../../dispatcher');
 describe('sourcesStore', () => {
-  let sourcesStore;
   let callback;
 
   const sources = {
     type: 'GET_SOURCES',
-    sources: mock_api
-  }
+    sources: mockApi,
+  };
 
   beforeEach(() => {
-    sourcesStore = require('../../stores/sourcesStore').default;
     callback = dispatcher.register.mock.calls[0][0];
   });
 
@@ -28,7 +26,7 @@ describe('sourcesStore', () => {
 
   it('stores mock', () => {
     callback(sources);
-    expect(sourcesStore.getSources().length).toBe(10)
-    expect(sourcesStore.getSources()).toEqual(mock_api);
+    expect(sourcesStore.getSources().length).toBe(10);
+    expect(sourcesStore.getSources()).toEqual(mockApi);
   });
 });

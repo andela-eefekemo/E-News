@@ -2,7 +2,7 @@ import React from 'react';
 
 import sourcesStore from '../stores/sourcesStore';
 import * as NewsActions from '../actions/newsAction';
-import Sources from '../components/Sources.jsx';
+import Sources from './Sources.jsx';
 
 /**
  * Home React Component
@@ -55,8 +55,10 @@ export default class SourceList extends React.Component {
   filterSources(event) {
     const searchList = [];
     sourcesStore.getSources().map((source) => {
-      if (source.name.toLowerCase()
-        .search(event.target.value.toLowerCase()) !== -1) {
+      if (
+        source.name.toLowerCase().search(event.target.value.toLowerCase()) !==
+        -1
+      ) {
         searchList.push(source);
       }
     });
@@ -69,7 +71,9 @@ export default class SourceList extends React.Component {
   render() {
     const { sources } = this.state;
     // maps through sources array and passes props to Sources component
-    const SourcesComponents = sources.map(source => <Sources key={source.id} {...source} />);
+    const SourcesComponents = sources.map(source => (
+      <Sources key={source.id} {...source} />
+    ));
     return (
       <div className="container">
         <div className="row">
@@ -79,7 +83,8 @@ export default class SourceList extends React.Component {
               type="text"
               className="validate"
               placeholder="Search for sources"
-              onChange={this.filter} />
+              onChange={this.filter}
+            />
           </div>
         </div>
         <div className="row">

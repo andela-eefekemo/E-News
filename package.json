@@ -68,9 +68,7 @@
       "<rootDir>/node_modules/react",
       "<rootDir>/node_modules/react-dom"
     ],
-    "setupFiles": [
-      "<rootDir>/src/js/__mocks__/browserMocks.js"
-    ]
+    "setupFiles": []
   },
   "scripts": {
     "start": "npm run dev-start",

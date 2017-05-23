@@ -1,10 +1,9 @@
+/* global expect jest test */
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import SourceList from '../../pages/SourceList';
-import Sources from '../../components/Sources';
-
+import SourceList from '../../components/SourceList';
 
 test('Home Component', () => {
   const component = mount(<SourceList />);
@@ -17,12 +16,12 @@ test('Home Component', () => {
   expect(component.find('#bar').length).toBe(1);
 });
 
-test('Testing filter function', () =>{
+test('Testing filter function', () => {
   const filterSources = jest.fn();
   const component = mount(<SourceList onChange={filterSources} />);
   const input = component.find('input');
   expect(input).toBeDefined();
   expect(component.state().searchTerm).toBe('');
-  input.simulate('change', {target: { value: 'the next' }});
+  input.simulate('change', { target: { value: 'the next' } });
   expect(component.state().searchTerm).toBe('the next');
 });
