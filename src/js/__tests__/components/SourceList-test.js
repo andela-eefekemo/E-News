@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import renderer from 'react-test-renderer';
 
 import SourceList from '../../pages/SourceList';
 import Sources from '../../components/Sources';
@@ -18,10 +17,12 @@ test('Home Component', () => {
   expect(component.find('#bar').length).toBe(1);
 });
 
-
-test('Testing Props', () => {
-  // const wrapper = mount(<SourceList />);
-  // expect(wrapper.state('sources')).toEqual([]);
-  // wrapper.setState({ sources: 'the-next-web' });
-  // expect(wrapper.state('sources')).toEqual('the-next-web');
+test('Testing filter function', () =>{
+  const filterSources = jest.fn();
+  const component = mount(<SourceList onChange={filterSources} />);
+  const input = component.find('input');
+  expect(input).toBeDefined();
+  expect(component.state().searchTerm).toBe('');
+  input.simulate('change', {target: { value: 'the next' }});
+  expect(component.state().searchTerm).toBe('the next');
 });

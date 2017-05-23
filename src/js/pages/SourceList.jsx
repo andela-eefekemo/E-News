@@ -13,6 +13,7 @@ export default class SourceList extends React.Component {
     this.state = {
       sources: [],
       name: 'sources',
+      searchTerm: '',
     };
     this.sources = this.getSources.bind(this);
     this.filter = this.filterSources.bind(this);
@@ -61,6 +62,7 @@ export default class SourceList extends React.Component {
     });
     this.setState({
       sources: searchList,
+      searchTerm: event.target.value,
     });
   }
 

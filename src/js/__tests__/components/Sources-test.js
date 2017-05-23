@@ -18,12 +18,12 @@ test('Testing Props', () => {
 });
 
 test('Testing onClick Function', () => {
-//   const handleQueryValue = jest.fn();
-//   const wrapper = mount(<Sources onClick={handleQueryValue} />);
-//   const button = wrapper.find('button');
-//   expect(handleQueryValue).not.toBeCalled();
-//   button.simulate('click');
-//   expect(handleQueryValue).toBeCalled();
+  const handleQueryValue = jest.fn();
+  const wrapper = mount(<Sources onClick={handleQueryValue} />);
+  const button = wrapper.find('button');
+  expect(handleQueryValue).not.toBeCalled();
+  button.simulate('click');
+  expect(handleQueryValue).toBeCalled();
 });
 
 test('Testing props in proper position', () => {

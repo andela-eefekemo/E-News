@@ -18,6 +18,7 @@ class ArticleList extends React.Component {
     this.state = {
       articles: [],
       name: 'articles',
+      currentSort: '',
     };
     this.article = this.getArticle.bind(this);
     this.sortsBy = [];
@@ -58,6 +59,7 @@ class ArticleList extends React.Component {
   onChange(event) {
     const value = event.target.value;
     NewsActions.getArticles(this.id, value);
+    this.setState({ currentSort: value });
   }
   /**
    * @method getArticle - Sets the state of articles to data retrieve from articlesStore

@@ -5,6 +5,7 @@ import axios from 'axios';
  * @param {string} category - Set default to null
  * @param {string} sortBy
  * @param {function} callback
+ * @return {Promise}
  */
 const get = {
   get: link => axios.get(link)

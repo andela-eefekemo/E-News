@@ -11,11 +11,14 @@ test('Headline Component', () => {
   expect(component).toMatchSnapshot();
 });
 
-test('Component render a button', () => {
 
-  const component = renderer.create(
-    <Articles/>,
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+test('Testing filter function', () =>{
+  const onChange= jest.fn();
+  const component = mount(<ArticleList onChange={onChange} />);
+  expect(component.props().onChange).toBeDefined();
+  const input = component.find('select');
+  expect(input).toBeDefined();
+  expect(component.state().currentSort).toBe('');
+  input.simulate('change', {target: { value: 'top' }});
+  expect(component.state().currentSort).toBe('top');
 });
