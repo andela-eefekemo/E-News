@@ -5,5 +5,5 @@ test('Returns List of Articles from Api', () => {
   const articles = newsApi.get();
 
   expect(spy).toHaveBeenCalled();
-  expect(articles).toEqual(Promise.resolve())
+  expect(articles).toEqual(Promise.resolve());
 });
