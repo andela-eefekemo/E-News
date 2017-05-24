@@ -1,6 +1,6 @@
 /* global expect jest describe it beforeEach */
 import dispatcher from '../../dispatcher';
-import mockApi from '../../__mocks__/mockApi.json';
+import mockApi from '../__mocks__/mockApi.json';
 import articlesStore from '../../stores/articlesStore';
 
 jest.mock('../../dispatcher');

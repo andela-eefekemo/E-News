@@ -2,7 +2,6 @@
 import React from 'react';
 import GoogleLogin from 'react-google-login';
 
-
 const Login = () => {
   /**
    * @function responseSuccess
@@ -12,12 +11,15 @@ const Login = () => {
    */
   const responseSuccess = (googleUser) => {
     const profile = googleUser.getBasicProfile();
-    localStorage.setItem('User', JSON.stringify({
-      iD: profile.getId(),
-      name: profile.getName(),
-      imageURL: profile.getImageUrl(),
-      email: profile.getEmail(),
-    }));
+    localStorage.setItem(
+      'User',
+      JSON.stringify({
+        iD: profile.getId(),
+        name: profile.getName(),
+        imageURL: profile.getImageUrl(),
+        email: profile.getEmail(),
+      }),
+    );
     location.reload();
   };
   const id = process.env.ID;
@@ -36,18 +38,21 @@ const Login = () => {
           <img src="public/img/home.jpg" alt="home" />
           <div className="caption center-align">
             <h3 className="light black-text text-lighten-3">E-News</h3>
-            <h5 className="light black-text text-lighten-3">View Headlines as it happens</h5>
+            <h5 className="light black-text text-lighten-3">
+              View Headlines as it happens
+            </h5>
             <GoogleLogin
               clientId={id}
               tag="span"
               onSuccess={responseSuccess}
               onFailure={responseFailure}
               disabled="false"
-              style={{ opacity: 1 }}
+              style={{ opacity: 0 }}
             >
               <span
-                className="btn waves-effect waves-light"
-                name="action">
+                className="btn waves-effect waves red darken-4"
+                name="action"
+              >
                 <i className="fa fa-google google" />
                 Sign in with google
               </span>
@@ -61,4 +66,3 @@ const Login = () => {
 };
 
 export default Login;
-
