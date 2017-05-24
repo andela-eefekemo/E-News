@@ -5,7 +5,9 @@ import * as NewsActions from '../actions/newsAction';
 import Sources from './Sources.jsx';
 
 /**
- * Home React Component
+ * @export
+ * @class SourceList
+ * @extends {React.Component}
  */
 export default class SourceList extends React.Component {
   constructor() {

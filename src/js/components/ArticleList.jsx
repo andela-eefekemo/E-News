@@ -10,7 +10,8 @@ import Dropdown from './Dropdown.jsx';
 import Articles from './Articles.jsx';
 
 /**
- * Class representing ArticleList React Component
+ * @class ArticleList
+ * @extends {React.Component}
  */
 class ArticleList extends React.Component {
   constructor(props) {

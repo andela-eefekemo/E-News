@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
+/**
+ * @param {any} props
+ * @returns
+ */
 const Dropdown = (props) => {
   const { value, text } = props;
-  return (
-    <option value={value}>{text}</option>
-  );
+  return <option value={value}>{text}</option>;
 };
 
 Dropdown.defaultProps = {

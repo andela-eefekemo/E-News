@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 import Share from './Share.jsx';
 
-
+/**
+ * @param {any} props
+ * @returns
+ */
 const Article = (props) => {
   const { urlToImage, description, title, url } = props;
   return (
-
     <div className="col s12 m6 l6 height">
       <div className="card card-panel hoverable">
         <div className="card-image">
@@ -19,7 +21,9 @@ const Article = (props) => {
         </div>
         <div className="row">
           <div className="card-action col s6">
-            <a href={url} target="_blank" rel="noopener noreferrer">View More</a>
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              View More
+            </a>
           </div>
           <div className="col s6">
             <Share share={url} title={title} />
@@ -46,4 +50,3 @@ Article.propTypes = {
 };
 
 export default Article;
-

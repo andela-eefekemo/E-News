@@ -5,7 +5,7 @@ import GoogleLogin from 'react-google-login';
 const Login = () => {
   /**
    * @function responseSuccess
-   * @param {Object} googleUser - Response object
+   * @param {any} googleUser - Response object
    * Saves user profile to localStorage
    * reloads the page
    */

@@ -13,6 +13,10 @@ const TwitterIcon = generateShareIcon('twitter');
 const GooglePlusIcon = generateShareIcon('google');
 const LinkedinIcon = generateShareIcon('linkedin');
 
+/**
+ * @param {any} props
+ * @returns
+ */
 const Share = (props) => {
   const shareUrl = props.share;
   const title = props.title;
@@ -22,7 +26,8 @@ const Share = (props) => {
         <FacebookShareButton
           url={shareUrl}
           title={title}
-          className="Demo__some-network__share-button">
+          className="Demo__some-network__share-button"
+        >
           <FacebookIcon size={32} round />
         </FacebookShareButton>
       </div>
@@ -30,14 +35,16 @@ const Share = (props) => {
         <TwitterShareButton
           url={shareUrl}
           title={title}
-          className="Demo__some-network__share-button">
+          className="Demo__some-network__share-button"
+        >
           <TwitterIcon size={32} round />
         </TwitterShareButton>
       </div>
       <div className="col s2 m2 l2">
         <GooglePlusShareButton
           url={shareUrl}
-          className="Demo__some-network__share-button">
+          className="Demo__some-network__share-button"
+        >
           <GooglePlusIcon size={32} round />
         </GooglePlusShareButton>
       </div>
@@ -47,7 +54,8 @@ const Share = (props) => {
           title={title}
           windowWidth={750}
           windowHeight={600}
-          className="Demo__some-network__share-button">
+          className="Demo__some-network__share-button"
+        >
           <LinkedinIcon size={32} round />
         </LinkedinShareButton>
       </div>

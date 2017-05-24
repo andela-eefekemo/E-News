@@ -3,8 +3,11 @@ import { browserHistory } from 'react-router';
 import PropTypes from 'prop-types';
 
 // Sources Component
+/**
+ * @class Sources
+ * @extends {React.Component}
+ */
 class Sources extends React.Component {
-
   handleQueryValue(href) {
     browserHistory.push(href);
   }
@@ -17,7 +20,8 @@ class Sources extends React.Component {
         <p className="truncate">{description}</p>
         <button
           className="btn btn-default"
-          onClick={this.handleQueryValue.bind(this, link)}>
+          onClick={this.handleQueryValue.bind(this, link)}
+        >
           View Headlines
         </button>
       </div>
