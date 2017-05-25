@@ -20,18 +20,20 @@ class SourcesStore extends EventEmitter {
 
   /**
    * @method updateSources
+   * @param {any} action
    * Listens to actions from the dispatcher
    * runs actions relevant to NewsStore
    * Emits a change event
    */
+
   updateSources(action) {
     switch (action.type) {
-      case constants.Sources:
-        this.sources = action.sources;
-        this.emit('changes');
-        break;
-      default:
-        break;
+    case constants.Sources:
+      this.sources = action.sources;
+      this.emit('changes');
+      break;
+    default:
+      break;
     }
   }
 }

@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Share from './Share.jsx';
+import Share from './Share';
 
 /**
  * @param {any} props
  * @returns
  */
+
 const Article = (props) => {
   const { urlToImage, description, title, url } = props;
   return (
@@ -39,14 +40,14 @@ Article.defaultProps = {
   urlToImage: '',
   description: '',
   title: '',
-  url: '',
+  url: ''
 };
 // Set Props
 Article.propTypes = {
   urlToImage: PropTypes.string,
   description: PropTypes.string,
   title: PropTypes.string,
-  url: PropTypes.string,
+  url: PropTypes.string
 };
 
 export default Article;

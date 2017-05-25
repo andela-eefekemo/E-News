@@ -2,14 +2,12 @@
 
 exports[`Navbar component 1`] = `
 <Nav
-  imageURL=""
   info={
     Object {
       "imageURL": "",
       "name": "",
     }
   }
-  name=""
 >
   <div>
     <nav>
@@ -38,12 +36,12 @@ exports[`Navbar component 1`] = `
         >
           <li>
             <IndexLink
-              to="/"
+              to="/home"
             >
               <Link
                 onlyActiveOnIndex={true}
                 style={Object {}}
-                to="/"
+                to="/home"
               >
                 <a
                   onClick={[Function]}
@@ -58,7 +56,7 @@ exports[`Navbar component 1`] = `
             <a
               className="dropdown-button"
               data-activates="dropdown1"
-              href="#"
+              href="#!"
             >
               <i
                 className="material-icons right"
@@ -106,7 +104,7 @@ exports[`Navbar component 1`] = `
             <Link
               onlyActiveOnIndex={false}
               style={Object {}}
-              to="/"
+              to="/home"
             >
               <a
                 onClick={[Function]}

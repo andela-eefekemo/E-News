@@ -6,7 +6,7 @@ const {
   FacebookShareButton,
   GooglePlusShareButton,
   LinkedinShareButton,
-  TwitterShareButton,
+  TwitterShareButton
 } = ShareButtons;
 const FacebookIcon = generateShareIcon('facebook');
 const TwitterIcon = generateShareIcon('twitter');
@@ -17,6 +17,7 @@ const LinkedinIcon = generateShareIcon('linkedin');
  * @param {any} props
  * @returns
  */
+
 const Share = (props) => {
   const shareUrl = props.share;
   const title = props.title;
@@ -65,12 +66,12 @@ const Share = (props) => {
 
 Share.defaultProps = {
   share: '',
-  title: '',
+  title: ''
 };
 
 Share.propTypes = {
   share: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string
 };
 
 export default Share;

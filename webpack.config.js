@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: __dirname,
     filename: 'public/client.min.js',
-    publicPath: 'public',
+    publicPath: 'public'
   },
   module: {
     loaders: [
@@ -19,29 +19,35 @@ module.exports = {
         include: path.join(__dirname, 'app'),
         exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react'],
-        },
-      }, {
+          presets: ['es2015', 'react']
+        }
+      },
+      {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           // resolve-url-loader may be chained before sass-loader if necessary
-          use: ['css-loader', 'sass-loader'],
-        }),
-      },
-    ],
+          use: ['css-loader', 'sass-loader']
+        })
+      }
+    ]
   },
   plugins: [
-    new ExtractTextPlugin({ filename: './public/css/style.css', allChunks: true }),
-    new webpack.DefinePlugin({
-      'process': {
-        'env': {
-          'KEY': JSON.stringify(process.env.KEY),
-          'ID': JSON.stringify(process.env.ID),
-        },
-      },
+    new ExtractTextPlugin({
+      filename: './public/css/style.css',
+      allChunks: true
     }),
+    new webpack.DefinePlugin({
+      process: {
+        env: {
+          KEY: JSON.stringify(process.env.KEY),
+          ID: JSON.stringify(process.env.ID)
+        }
+      }
+    })
   ],
-  watch: true,
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  watch: true
 };
-

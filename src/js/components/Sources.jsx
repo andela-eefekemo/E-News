@@ -1,5 +1,4 @@
 import React from 'react';
-import { browserHistory } from 'react-router';
 import PropTypes from 'prop-types';
 
 // Sources Component
@@ -9,7 +8,7 @@ import PropTypes from 'prop-types';
  */
 class Sources extends React.Component {
   handleQueryValue(href) {
-    browserHistory.push(href);
+    this.context.router.push(href);
   }
   render() {
     const { name, description, id, sortBysAvailable } = this.props;
@@ -34,14 +33,18 @@ Sources.defaultProps = {
   name: '',
   description: '',
   id: '',
-  sortBysAvailable: [],
+  sortBysAvailable: []
 };
 
 Sources.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   id: PropTypes.string,
-  sortBysAvailable: PropTypes.array,
+  sortBysAvailable: PropTypes.array
+};
+
+Sources.contextTypes = {
+  router: PropTypes.object.isRequired
 };
 
 export default Sources;

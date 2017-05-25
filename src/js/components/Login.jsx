@@ -9,6 +9,7 @@ const Login = () => {
    * Saves user profile to localStorage
    * reloads the page
    */
+
   const responseSuccess = (googleUser) => {
     const profile = googleUser.getBasicProfile();
     localStorage.setItem(
@@ -17,17 +18,19 @@ const Login = () => {
         iD: profile.getId(),
         name: profile.getName(),
         imageURL: profile.getImageUrl(),
-        email: profile.getEmail(),
-      }),
+        email: profile.getEmail()
+      })
     );
     location.reload();
   };
+  // Assigns the client Id to the id variable
   const id = process.env.ID;
   /**
    * @function responseFailure
    * @param {Object} response -Response object
    * console logs the error
    */
+
   const responseFailure = (response) => {
     console.log(response);
   };

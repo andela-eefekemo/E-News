@@ -1,19 +1,28 @@
 /* global localStorage*/
 import React from 'react';
+import PropTypes from 'react-router';
 
-import SourceList from './SourceList.jsx';
-import Nav from './layout/Nav.jsx';
-import Footer from './layout/Footer.jsx';
+import Nav from './Nav';
+import Footer from './Footer';
 
-const Main = () => {
+const Main = (props) => {
   const userInfo = JSON.parse(localStorage.getItem('User'));
   return (
     <div>
       <Nav info={userInfo} />
-      <SourceList />
+      {props.children}
       <Footer />
     </div>
   );
+};
+
+// Set Default Props
+Main.defaultProps = {
+  children: ''
+};
+
+Nav.propTypes = {
+  children: PropTypes.element
 };
 
 export default Main;

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
  * @param {any} props
  * @returns
  */
+
 const Dropdown = (props) => {
   const { value, text } = props;
   return <option value={value}>{text}</option>;
@@ -12,12 +13,12 @@ const Dropdown = (props) => {
 
 Dropdown.defaultProps = {
   value: '',
-  text: '',
+  text: ''
 };
 
 Dropdown.propTypes = {
   value: PropTypes.string,
-  text: PropTypes.string,
+  text: PropTypes.string
 };
 
 export default Dropdown;

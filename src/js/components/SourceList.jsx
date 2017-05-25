@@ -2,7 +2,7 @@ import React from 'react';
 
 import sourcesStore from '../stores/sourcesStore';
 import * as NewsActions from '../actions/newsAction';
-import Sources from './Sources.jsx';
+import Sources from './Sources';
 
 /**
  * @export
@@ -15,38 +15,46 @@ export default class SourceList extends React.Component {
     this.state = {
       sources: [],
       name: 'sources',
-      searchTerm: '',
+      searchTerm: ''
     };
     this.sources = this.getSources.bind(this);
     this.filter = this.filterSources.bind(this);
   }
+
   /**
    * @method componentDidMount - Runs after the page has been rendered
    * @return {void}
    * Makes an action call to get list of sources from the Api
    * Listens for a change event from the sourcesStore
    */
+
   componentDidMount() {
     NewsActions.getSources();
     sourcesStore.on('changes', this.sources);
   }
+
   /**
    * @method componentWillUnmount - Runs after component has been closed
    * @return {void}
    * Removes changes Listener from the sourcesStore
    */
+
   componentWillUnmount() {
     sourcesStore.removeListener('changes', this.sources);
   }
+
   /**
-   * @method getSources - Sets the state of Sources to data retrieve from sourcesStore
+   * @method getSources - Sets the state of Sources to data retrieve
+   * from sourcesStore
    * @return {void}
    */
+
   getSources() {
     this.setState({
-      sources: sourcesStore.getSources(),
+      sources: sourcesStore.getSources()
     });
   }
+
   /**
    * @method filterSources - Searches through available sources
    * @param {event} event - Takes in an onChange event
@@ -54,6 +62,7 @@ export default class SourceList extends React.Component {
    * Maps through lists of articles retrieved from the sourcesStore
    * Sets the sources State to the search result
    */
+
   filterSources(event) {
     const searchList = [];
     sourcesStore.getSources().map((source) => {
@@ -66,7 +75,7 @@ export default class SourceList extends React.Component {
     });
     this.setState({
       sources: searchList,
-      searchTerm: event.target.value,
+      searchTerm: event.target.value
     });
   }
 

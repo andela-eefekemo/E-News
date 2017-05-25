@@ -3,7 +3,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import Nav from '../../components/layout/Nav';
+import Nav from '../../components/Nav';
 
 test('Navbar component', () => {
   const component = mount(<Nav />);
