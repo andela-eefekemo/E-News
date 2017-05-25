@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should Match the Navbar component 1`] = `
+exports[`Nav Component should match the Nav snapshot 1`] = `
 <Nav
   info={
     Object {

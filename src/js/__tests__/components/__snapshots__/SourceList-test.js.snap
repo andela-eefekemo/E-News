@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should Match the Home Component 1`] = `
+exports[`SourceList Component should match the SourceList component snapshot 1`] = `
 <SourceList>
   <div
     className="container"

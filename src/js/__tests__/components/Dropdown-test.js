@@ -4,8 +4,10 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Dropdown from '../../components/Dropdown';
 
-test('Should Match the Dropdown component', () => {
-  const component = shallow(<Dropdown />);
-  const tree = toJson(component);
-  expect(tree).toMatchSnapshot();
+describe('Dropdown Component', () => {
+  test('should match the Dropdown snapshot', () => {
+    const component = shallow(<Dropdown />);
+    const tree = toJson(component);
+    expect(tree).toMatchSnapshot();
+  });
 });

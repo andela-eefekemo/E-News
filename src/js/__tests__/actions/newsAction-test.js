@@ -15,26 +15,28 @@ const newsApiGet = newsApi.get;
 newsApiGet.mockReturnValue(Promise.resolve({ data: 'This is the data' }));
 const dispatchSpy = jest.spyOn(dispatcher, 'dispatch');
 
-test('should call newsActions.getSources() on getSources', () => {
-  newsActions.getSources();
-  expect(newsApiGet.mock.calls.length).toBe(1);
-});
+describe('NewsActions', () => {
+  test('should call newsActions.getSources() on getSources', () => {
+    newsActions.getSources();
+    expect(newsApiGet.mock.calls.length).toBe(1);
+  });
 
-test('should call newsActions.getArticles()', () => {
-  newsActions.getArticles();
-  expect(newsApiGet.mock.calls.length).toBe(2);
-});
+  test('should call newsActions.getArticles()', () => {
+    newsActions.getArticles();
+    expect(newsApiGet.mock.calls.length).toBe(2);
+  });
 
-test('should dispatch appropriate action type when called', () => {
-  newsActions.getSources();
-  const action = dispatchSpy.mock.calls[0][0];
-  expect(dispatchSpy).toHaveBeenCalled();
-  expect(action.type).toEqual('GET_SOURCES');
-});
+  test('should dispatch appropriate action type when called', () => {
+    newsActions.getSources();
+    const action = dispatchSpy.mock.calls[0][0];
+    expect(dispatchSpy).toHaveBeenCalled();
+    expect(action.type).toEqual('GET_SOURCES');
+  });
 
-test('hould dispatch appropriate action type when called', () => {
-  newsActions.getArticles();
-  const action = dispatchSpy.mock.calls[0][0];
-  expect(dispatchSpy).toHaveBeenCalled();
-  expect(action.type).toEqual('GET_SOURCES');
+  test('should dispatch appropriate action type when called', () => {
+    newsActions.getArticles();
+    const action = dispatchSpy.mock.calls[0][0];
+    expect(dispatchSpy).toHaveBeenCalled();
+    expect(action.type).toEqual('GET_SOURCES');
+  });
 });

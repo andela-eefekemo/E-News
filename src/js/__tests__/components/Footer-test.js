@@ -6,8 +6,10 @@ import Footer from '../../components/Footer';
 
 jest.dontMock('../../components/Footer');
 
-test('Should Match the Footer component', () => {
-  const component = shallow(<Footer />);
-  const tree = toJson(component);
-  expect(tree).toMatchSnapshot();
+describe('Footer Component', () => {
+  test('should match the footer snapshot', () => {
+    const component = shallow(<Footer />);
+    const tree = toJson(component);
+    expect(tree).toMatchSnapshot();
+  });
 });
