@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Article Component 1`] = `
+exports[`Should match the HeadLine Component 1`] = `
 <Article
   description=""
   title=""
