@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Headline Component 1`] = `
+exports[`Should match the HeadLine Component 1`] = `
 <ArticleList
   location={
     Object {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sources Component 1`] = `
+exports[`Should Match the Sources Component 1`] = `
 <Sources
   description=""
   id=""
