@@ -20,28 +20,17 @@ exports[`Navbar component 1`] = `
         >
           E-News
         </a>
-        <a
-          className="button-collapse"
-          data-activates="mobile-demo"
-          href="#!"
-        >
-          <img
-            alt="profile"
-            className="pic"
-            src=""
-          />
-        </a>
         <ul
           className="right hide-on-med-and-down"
         >
           <li>
             <IndexLink
-              to="/home"
+              to="/"
             >
               <Link
                 onlyActiveOnIndex={true}
                 style={Object {}}
-                to="/home"
+                to="/"
               >
                 <a
                   onClick={[Function]}
@@ -53,48 +42,20 @@ exports[`Navbar component 1`] = `
             </IndexLink>
           </li>
           <li>
-            <a
-              className="dropdown-button"
-              data-activates="dropdown1"
-              href="#!"
+            <Link
+              onClick={[Function]}
+              onlyActiveOnIndex={false}
+              style={Object {}}
+              to="/logout"
             >
-              <i
-                className="material-icons right"
-              >
-                arrow_drop_down
-              </i>
-            </a>
-          </li>
-          <ul
-            className="dropdown-content"
-            id="dropdown1"
-          >
-            <li>
-              <img
-                alt="profile"
-                className="pic"
-                src=""
-              />
-            </li>
-            <li
-              className="divider"
-            />
-            <li>
-              <Link
+              <a
                 onClick={[Function]}
-                onlyActiveOnIndex={false}
                 style={Object {}}
-                to="/logout"
               >
-                <a
-                  onClick={[Function]}
-                  style={Object {}}
-                >
-                  Logout
-                </a>
-              </Link>
-            </li>
-          </ul>
+                Logout
+              </a>
+            </Link>
+          </li>
         </ul>
         <ul
           className="side-nav"
@@ -104,7 +65,7 @@ exports[`Navbar component 1`] = `
             <Link
               onlyActiveOnIndex={false}
               style={Object {}}
-              to="/home"
+              to="/"
             >
               <a
                 onClick={[Function]}
