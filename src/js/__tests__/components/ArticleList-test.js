@@ -5,12 +5,12 @@ import toJson from 'enzyme-to-json';
 
 import ArticleList from '../../components/ArticleList';
 
-test('Headline Component', () => {
+test('Should match the HeadLine Component', () => {
   const component = toJson(mount(<ArticleList sorts="top" />));
   expect(component).toMatchSnapshot();
 });
 
-test('Testing filter function', () => {
+test('Onchange Function Should Behave In Correct Manner', () => {
   const onChange = jest.fn();
   const component = mount(<ArticleList onChange={onChange} />);
   expect(component.props().onChange).toBeDefined();

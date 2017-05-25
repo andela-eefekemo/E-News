@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 
 import Nav from '../../components/Nav';
 
-test('Navbar component', () => {
+test('Should Match the Navbar component', () => {
   const component = mount(<Nav />);
   const tree = toJson(component);
   expect(tree).toMatchSnapshot();

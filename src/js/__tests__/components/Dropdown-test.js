@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Dropdown from '../../components/Dropdown';
 
-test('Dropdown component', () => {
+test('Should Match the Dropdown component', () => {
   const component = shallow(<Dropdown />);
   const tree = toJson(component);
   expect(tree).toMatchSnapshot();

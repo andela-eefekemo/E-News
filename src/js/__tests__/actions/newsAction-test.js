@@ -25,16 +25,16 @@ test('should call newsActions.getArticles()', () => {
   expect(newsApiGet.mock.calls.length).toBe(2);
 });
 
-test('', () => {
+test('should dispatch appropriate action type when called', () => {
   newsActions.getSources();
-  const arg = dispatchSpy.mock.calls[0][0];
+  const action = dispatchSpy.mock.calls[0][0];
   expect(dispatchSpy).toHaveBeenCalled();
-  expect(arg.type).toEqual('GET_SOURCES');
+  expect(action.type).toEqual('GET_SOURCES');
 });
 
-test('', () => {
+test('hould dispatch appropriate action type when called', () => {
   newsActions.getArticles();
-  const arg = dispatchSpy.mock.calls[0][0];
+  const action = dispatchSpy.mock.calls[0][0];
   expect(dispatchSpy).toHaveBeenCalled();
-  expect(arg.type).toEqual('GET_SOURCES');
+  expect(action.type).toEqual('GET_SOURCES');
 });

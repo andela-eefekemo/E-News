@@ -9,7 +9,7 @@ describe('sourcesStore', () => {
 
   const sources = {
     type: 'GET_SOURCES',
-    sources: mockApi,
+    sources: mockApi
   };
 
   beforeEach(() => {
@@ -20,11 +20,11 @@ describe('sourcesStore', () => {
     expect(dispatcher.register.mock.calls.length).toBe(1);
   });
 
-  it('should initialize with no article', () => {
+  it('should initialize with no sources', () => {
     expect(sourcesStore.getSources().length).toBe(0);
   });
 
-  it('stores mock', () => {
+  it('return the appropraite result', () => {
     callback(sources);
     expect(sourcesStore.getSources().length).toBe(10);
     expect(sourcesStore.getSources()).toEqual(mockApi);

@@ -5,20 +5,20 @@ import toJson from 'enzyme-to-json';
 
 import Sources from '../../components/Sources';
 
-test('Sources Component', () => {
+test('Should Match the Sources Component', () => {
   const component = mount(<Sources />);
   const tree = toJson(component);
   expect(tree).toMatchSnapshot();
 });
 
-test('Testing Props', () => {
+test('Should contain the appropraite props', () => {
   const wrapper = mount(<Sources />);
   expect(wrapper.node.props.name).toEqual('');
   wrapper.setProps({ name: 'the-next-web' });
   expect(wrapper.node.props.name).toEqual('the-next-web');
 });
 
-test('Testing props in proper position', () => {
+test('Props Should be in correct Positions', () => {
   const wrapper = mount(<Sources name="Eguono" description="my name" />);
   const h5 = wrapper.find('h5');
   const p = wrapper.find('p');

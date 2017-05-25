@@ -5,10 +5,14 @@ import toJson from 'enzyme-to-json';
 
 import SourceList from '../../components/SourceList';
 
-test('Home Component', () => {
+test('Should Match the Home Component', () => {
   const component = mount(<SourceList />);
   const tree = toJson(component);
   expect(tree).toMatchSnapshot();
+});
+
+test('States Should be in the Correct Positions', () => {
+  const component = mount(<SourceList />);
   expect(component.find('#sources').length).toBe(1);
   expect(component.find('#bar').length).toBe(0);
   component.setState({ name: 'bar' });
@@ -16,7 +20,7 @@ test('Home Component', () => {
   expect(component.find('#bar').length).toBe(1);
 });
 
-test('Testing filter function', () => {
+test('Should Test the Behaviour of the Filter Function', () => {
   const filterSources = jest.fn();
   const component = mount(<SourceList onChange={filterSources} />);
   const input = component.find('input');

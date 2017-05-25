@@ -9,7 +9,7 @@ describe('articlesStore', () => {
 
   const articles = {
     type: 'GET_ARTICLES',
-    articles: mockApi,
+    articles: mockApi
   };
 
   beforeEach(() => {
@@ -24,7 +24,7 @@ describe('articlesStore', () => {
     expect(articlesStore.articles.length).toBe(0);
   });
 
-  it('stores mock', () => {
+  it('return the appropraite result', () => {
     callback(articles);
     expect(articlesStore.getArticles().length).toBe(10);
     expect(articlesStore.getArticles()).toEqual(mockApi);
