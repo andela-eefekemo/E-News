@@ -21,8 +21,8 @@ Main.defaultProps = {
   children: ''
 };
 
-Nav.propTypes = {
-  children: PropTypes.element
-};
+// Nav.propTypes = {
+//   children: PropTypes.element
+// };
 
 export default Main;

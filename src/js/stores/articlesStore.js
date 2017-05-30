@@ -10,20 +10,21 @@ class ArticlesStore extends EventEmitter {
   }
 
   /**
- * @method getArticle
- * @return {array} - returns an array of articles
- */
+  * @method getArticle
+  * @return {array} - returns an array of articles
+  */
   getArticles() {
     return this.articles;
   }
 
   /**
-   * @method updateArticles
-   * Listens to actions from the dispatcher
-   * runs actions relevant to NewsStore
-   * Emits a change event
-   */
-
+  * @method updateArticles
+  * @param {any} action
+  * @return {void}
+  * Listens to actions from the dispatcher
+  * runs actions relevant to NewsStore
+  * Emits a change event
+  */
   updateArticles(action) {
     switch (action.type) {
     case constants.Articles:

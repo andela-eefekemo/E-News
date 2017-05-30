@@ -1,9 +1,9 @@
-import api from './mockApi.json';
+import mockApi from './mockApi.json';
 
 const apiCall = {
   get() {
-    return Promise.resolve(api);
-  },
+    return Promise.resolve(mockApi);
+  }
 };
 
 export default apiCall;
