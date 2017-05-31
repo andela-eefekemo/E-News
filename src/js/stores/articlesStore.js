@@ -27,12 +27,12 @@ class ArticlesStore extends EventEmitter {
   */
   updateArticles(action) {
     switch (action.type) {
-    case constants.Articles:
-      this.articles = action.articles;
-      this.emit('changes');
-      break;
-    default:
-      break;
+      case constants.Articles:
+        this.articles = action.articles;
+        this.emit('changes');
+        break;
+      default:
+        break;
     }
   }
 }

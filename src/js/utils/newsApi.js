@@ -3,11 +3,11 @@ import axios from 'axios';
 /**
  * @class Get
  */
-class Get {
+class NewsApi {
   /**
    * @static
    * @param {any} link - Takes in a link parameter
-   * @memberof Get
+   * @memberof NewsApi
    * @return {Promise} - Returns a promise
    */
   static get(link) {
@@ -18,4 +18,4 @@ class Get {
   }
 }
 
-export default Get;
+export default NewsApi;

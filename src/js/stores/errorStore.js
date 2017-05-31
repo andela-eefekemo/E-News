@@ -27,12 +27,12 @@ class ErrorStore extends EventEmitter {
   */
   updateErrors(action) {
     switch (action.type) {
-    case constants.Errors:
-      this.errorMessage = action.message;
-      this.emit('errors');
-      break;
-    default:
-      break;
+      case constants.Errors:
+        this.errorMessage = action.message;
+        this.emit('errors');
+        break;
+      default:
+        break;
     }
   }
 }

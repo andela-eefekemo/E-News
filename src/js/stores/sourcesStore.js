@@ -28,12 +28,12 @@ class SourcesStore extends EventEmitter {
   */
   updateSources(action) {
     switch (action.type) {
-    case constants.Sources:
-      this.sources = action.sources;
-      this.emit('changes');
-      break;
-    default:
-      break;
+      case constants.Sources:
+        this.sources = action.sources;
+        this.emit('changes');
+        break;
+      default:
+        break;
     }
   }
 }
