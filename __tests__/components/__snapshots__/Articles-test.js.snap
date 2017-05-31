@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD:src/js/__tests__/components/__snapshots__/Articles-test.js.snap
 exports[`Should match the HeadLine Component 1`] = `
+=======
+exports[`Article Component should match the article snapshot 1`] = `
+>>>>>>> b9dc9b0694863370ad929e16726c66fd2aa8f6a3:__tests__/components/__snapshots__/Articles-test.js.snap
 <Article
   description=""
   title=""

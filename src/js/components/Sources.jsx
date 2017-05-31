@@ -44,7 +44,7 @@ Sources.propTypes = {
 };
 
 Sources.contextTypes = {
-  router: PropTypes.object.isRequired
+  router: PropTypes.object
 };
 
 export default Sources;

@@ -1,10 +1,10 @@
 /* global expect jest describe it beforeEach */
-import dispatcher from '../../dispatcher';
+import dispatcher from '../../src/js/dispatcher';
 import mockApi from '../../__mocks__/mockApi.json';
-import articlesStore from '../../stores/articlesStore';
+import articlesStore from '../../src/js/stores/articlesStore';
 
-jest.mock('../../dispatcher');
-describe('articlesStore', () => {
+jest.mock('../../src/js/dispatcher');
+describe('Articles Store', () => {
   let callback;
 
   const articles = {
@@ -16,7 +16,7 @@ describe('articlesStore', () => {
     callback = dispatcher.register.mock.calls[0][0];
   });
 
-  it('register a call with the dispatcher', () => {
+  it('should register a call with the dispatcher', () => {
     expect(dispatcher.register.mock.calls.length).toBe(1);
   });
 
@@ -24,7 +24,7 @@ describe('articlesStore', () => {
     expect(articlesStore.articles.length).toBe(0);
   });
 
-  it('return the appropraite result', () => {
+  it('should return the appropraite result', () => {
     callback(articles);
     expect(articlesStore.getArticles().length).toBe(10);
     expect(articlesStore.getArticles()).toEqual(mockApi);

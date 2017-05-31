@@ -1,6 +1,8 @@
 /* global location localStorage window*/
 import React from 'react';
 import GoogleLogin from 'react-google-login';
+import * as newsActions from '../actions/newsAction';
+import Error from './Error';
 
 const Login = () => {
   /**
@@ -32,7 +34,7 @@ const Login = () => {
    */
 
   const responseFailure = (response) => {
-    console.log(response);
+    newsActions.getFailed('Failed to Log In, Please try again');
   };
   return (
     <div className="slider fullscreen valign-wrapper">
@@ -40,6 +42,7 @@ const Login = () => {
         <li>
           <img src="public/img/home.jpg" alt="home" />
           <div className="caption center-align">
+            <Error />
             <h3 className="light black-text text-lighten-3">E-News</h3>
             <h5 className="light black-text text-lighten-3">
               View Headlines as it happens

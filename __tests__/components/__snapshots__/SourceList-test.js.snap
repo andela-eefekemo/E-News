@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD:src/js/__tests__/components/__snapshots__/SourceList-test.js.snap
 exports[`Should Match the Home Component 1`] = `
+=======
+exports[`SourceList Component should match the SourceList component snapshot 1`] = `
+>>>>>>> b9dc9b0694863370ad929e16726c66fd2aa8f6a3:__tests__/components/__snapshots__/SourceList-test.js.snap
 <SourceList>
   <div
     className="container"

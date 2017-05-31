@@ -11,21 +11,21 @@ class SourcesStore extends EventEmitter {
   }
 
   /**
- * @method getSources
- * @return {array} returns an array of  sources
- */
+  * @method getSources
+  * @return {array} returns an array of  sources
+  */
   getSources() {
     return this.sources;
   }
 
   /**
-   * @method updateSources
-   * @param {any} action
-   * Listens to actions from the dispatcher
-   * runs actions relevant to NewsStore
-   * Emits a change event
-   */
-
+  * @method updateSources
+  * @param {any} action
+  * @return {void}
+  * Listens to actions from the dispatcher
+  * runs actions relevant to NewsStore
+  * Emits a change event
+  */
   updateSources(action) {
     switch (action.type) {
     case constants.Sources:

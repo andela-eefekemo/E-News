@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD:src/js/__tests__/components/__snapshots__/Sources-test.js.snap
 exports[`Should Match the Sources Component 1`] = `
+=======
+exports[`Sources Component should match the sources snapshot 1`] = `
+>>>>>>> b9dc9b0694863370ad929e16726c66fd2aa8f6a3:__tests__/components/__snapshots__/Sources-test.js.snap
 <Sources
   description=""
   id=""

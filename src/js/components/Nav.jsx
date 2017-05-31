@@ -58,8 +58,5 @@ Nav.propTypes = {
   imageURL: PropTypes.string,
   name: PropTypes.string
 };
-Nav.contextTypes = {
-  router: PropTypes.object.isRequired
-};
 
 export default Nav;
