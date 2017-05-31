@@ -1,11 +1,11 @@
 /* global expect jest test */
-import dispatcher from '../../dispatcher';
-import * as newsActions from '../../actions/newsAction';
-import newsApi from '../../utils/newsApi';
+import dispatcher from '../../src/js/dispatcher';
+import * as newsActions from '../../src/js/actions/newsAction';
+import newsApi from '../../src/js/utils/newsApi';
 
 // Mock the dispatcher, firebaseApi and newsApi.
-jest.mock('../../dispatcher');
-jest.mock('../../utils/newsApi');
+jest.mock('../../src/js/dispatcher');
+jest.mock('../../src/js/utils/newsApi');
 
 // Setup the actual mock functions for the relevant functions.
 // const dispatch = dispatcher.dispatch.mock;

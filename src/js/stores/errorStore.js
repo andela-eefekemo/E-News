@@ -6,16 +6,15 @@ import * as constants from '../constants/constants';
 class ErrorStore extends EventEmitter {
   constructor() {
     super();
-    this.error = '';
-    this.getErrors = this.getErrors.bind(this);
+    this.errorMessage = '';
   }
 
   /**
   * @method getErrors
-  * @return {array} returns the error message
+  * @return {string} returns the error message
   */
   getErrors() {
-    return this.error;
+    return this.errorMessage;
   }
 
   /**
@@ -29,8 +28,8 @@ class ErrorStore extends EventEmitter {
   updateErrors(action) {
     switch (action.type) {
     case constants.Errors:
-      this.error = action.message;
-      this.emit('error');
+      this.errorMessage = action.message;
+      this.emit('errors');
       break;
     default:
       break;

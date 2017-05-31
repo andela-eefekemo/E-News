@@ -23,7 +23,7 @@ export default class Error extends React.Component {
    */
 
   componentDidMount() {
-    errorStore.on('error', this.error);
+    errorStore.on('errors', this.error);
   }
 
   /**

@@ -3,7 +3,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import SourceList from '../../components/SourceList';
+import SourceList from '../../src/js/components/SourceList';
 
 describe('SourceList Component', () => {
   test('should match the SourceList component snapshot', () => {

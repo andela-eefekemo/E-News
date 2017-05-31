@@ -2,7 +2,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Dropdown from '../../components/Dropdown';
+import Dropdown from '../../src/js/components/Dropdown';
 
 describe('Dropdown Component', () => {
   test('should match the Dropdown snapshot', () => {

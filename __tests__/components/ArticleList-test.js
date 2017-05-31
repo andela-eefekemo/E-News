@@ -3,7 +3,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import ArticleList from '../../components/ArticleList';
+import ArticleList from '../../src/js/components/ArticleList';
 
 describe('HeadLine Component', () => {
   test('Should match the HeadLine Snapshot', () => {

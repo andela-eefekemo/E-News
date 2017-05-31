@@ -1,5 +1,5 @@
 /* global expect jest test */
-import newsApi from '../../utils/newsApi';
+import newsApi from '../../src/js/utils/newsApi';
 
 describe('News Api Axios Call', () => {
   test('should returns a promise resolve from the Api', () => {

@@ -2,9 +2,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Footer from '../../components/Footer';
+import Footer from '../../src/js/components/Footer';
 
-jest.dontMock('../../components/Footer');
+jest.dontMock('../../src/js/components/Footer');
 
 describe('Footer Component', () => {
   test('should match the footer snapshot', () => {

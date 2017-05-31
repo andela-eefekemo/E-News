@@ -3,7 +3,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import Nav from '../../components/Nav';
+import Nav from '../../src/js/components/Nav';
 
 describe('Nav Component', () => {
   test('should match the Nav snapshot', () => {

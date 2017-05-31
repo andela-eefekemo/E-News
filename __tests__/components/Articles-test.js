@@ -3,7 +3,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import Article from '../../components/Articles';
+import Article from '../../src/js/components/Articles';
 
 describe('Article Component', () => {
   test('should match the article snapshot', () => {

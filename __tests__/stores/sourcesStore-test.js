@@ -1,9 +1,9 @@
 /* global expect jest describe it beforeEach */
-import dispatcher from '../../dispatcher';
+import dispatcher from '../../src/js/dispatcher';
 import mockApi from '../../__mocks__/mockApi.json';
-import sourcesStore from '../../stores/sourcesStore';
+import sourcesStore from '../../src/js/stores/sourcesStore';
 
-jest.mock('../../dispatcher');
+jest.mock('../../src/js/dispatcher');
 describe('Sources Store', () => {
   let callback;
 
