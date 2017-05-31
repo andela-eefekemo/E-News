@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 /**
- * @class Get
+ * @class NewsApi
  */
 class NewsApi {
   /**
